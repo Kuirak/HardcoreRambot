@@ -24,6 +24,10 @@ public class Player : Affiliation
     {
         heartPower += heartPower;
 
-        //if (heartPower > levelUpHearts[level]
+        if (heartPower >= levelUpHearts[level - 1])
+        {
+            level++;
+            print("Level "+level);
+        }
     }
 }
