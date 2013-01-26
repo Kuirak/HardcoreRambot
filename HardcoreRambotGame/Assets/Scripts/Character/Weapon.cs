@@ -19,7 +19,7 @@ public class Weapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButton("Fire1"))
-			//Instantiate(muzzleFlash, transform.position, transform.rotation);
+
             Shoot();
     }
 
@@ -31,7 +31,9 @@ public class Weapon : MonoBehaviour {
         {
             
             lastShotTime = Time.time;
-            Instantiate(bullet[lvl - 1], transform.position, Quaternion.Lerp(transform.rotation,Random.rotation,JitterStrength) );
+            Quaternion r = Quaternion.Lerp(transform.rotation, Random.rotation, JitterStrength);
+            Instantiate(bullet[lvl - 1], transform.position, r );
+            Instantiate(muzzleFlash, transform.position, r);
         }
 	}
 }
