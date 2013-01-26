@@ -1,14 +1,17 @@
 fileFormatVersion: 2
-guid: 52dbaac166373e34aa6a4ccc1c4615fa
+guid: 454b664dd49a26a4a9edccfaece30143
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube_018
-    7400000: Default Take
+    100000: Cylinder080
+    100002: Object022
+    100004: //RootNode
+    400000: Cylinder080
+    400002: Object022
+    400004: //RootNode
+    2300000: Cylinder080
+    3300000: Cylinder080
+    4300000: Cylinder080
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -26,7 +29,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     swapUVChannels: 0

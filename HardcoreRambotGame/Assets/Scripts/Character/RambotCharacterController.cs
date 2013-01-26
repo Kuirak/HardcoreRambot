@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Jetpack))]
 public class RambotCharacterController : MonoBehaviour
 {
     private Vector3 Speed = Vector3.zero;
@@ -11,12 +12,13 @@ public class RambotCharacterController : MonoBehaviour
     public Transform Body;
     public float GravityStrength=0.1f;
     private CharacterController _controller;
-    
+    private Jetpack _jetpack;
 
 	// Use this for initialization
 	void Start ()
 	{
 	    _controller = GetComponent<CharacterController>();
+	    _jetpack = GetComponent<Jetpack>();
 	    Screen.lockCursor = true;
 	}
 	
@@ -30,7 +32,10 @@ public class RambotCharacterController : MonoBehaviour
             Speed = Vector3.zero;
         }
 	    Speed += Jump();
-	    Speed += Physics.gravity * GravityStrength;
+        if (!_jetpack.IsFlying || !Input.GetButton("Jump"))
+        {
+            Speed += Physics.gravity*GravityStrength;
+        }
 	    moveDir += Speed;
 	    moveDir *= Time.fixedDeltaTime;
 	    _controller.Move(moveDir);
