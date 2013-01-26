@@ -30,7 +30,8 @@ public class Player : Affiliation
             level++;
 
             for (int i=0;i<w.visibleWeapon.Length;i++)
-                w.visibleWeapon[i].gameObject.SetActive(level-1 == i);
+                if (w.visibleWeapon[i])
+                    w.visibleWeapon[i].gameObject.SetActive(level-1 == i);
             print("Level Up!! Now: "+level);
         }
     }
