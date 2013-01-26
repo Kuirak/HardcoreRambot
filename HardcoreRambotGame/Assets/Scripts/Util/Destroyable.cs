@@ -20,6 +20,7 @@ public class Destroyable : MonoBehaviour {
 
     public void receiveDamage(float damage)
     {
+        
         health -= damage;
 
         if (health <= 0)
