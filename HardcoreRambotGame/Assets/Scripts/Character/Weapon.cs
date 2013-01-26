@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour {
 
-    public Bullet bullet;
-    public float shootsPerMinute = 100;
+    public Bullet[] bullet;
+    public float[] shootsPerMinute;
+    public GameObject[] visibleWeapon;
 
     float lastShotTime = 0;
 
@@ -21,11 +22,12 @@ public class Weapon : MonoBehaviour {
 
     public void Shoot() 
     {
+        int lvl = Player.instance.level;
 
-        if (Time.time > lastShotTime + 1 / shootsPerMinute)
+        if (Time.time > lastShotTime + 1 / shootsPerMinute[lvl-1])
         {
             lastShotTime = Time.time;
-            GameObject.Instantiate(bullet, transform.position, transform.rotation);
+            GameObject.Instantiate(bullet[lvl - 1], transform.position, transform.rotation);
         }
 	}
 }

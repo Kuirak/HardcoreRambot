@@ -38,7 +38,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dba7bdfa7affb246ae2848122f18e79, type: 3}
   m_Name: 
   spawn: {fileID: 100002, guid: 69d0c15c8ab12b544ac65fc5ac2b6231, type: 2}
-  timeBetweenSpawns: 1
+  timeBetweenSpawns: 10
+  minLevel: 1
+  maxLevel: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

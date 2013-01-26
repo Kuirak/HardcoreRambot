@@ -7,3 +7,6 @@
 *.unityproj
 *.sln
 _ReSharper*/
+#ignore thumbnails created by windows
+Thumbs.db
+Thumbs.db.meta

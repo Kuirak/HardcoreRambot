@@ -11,6 +11,7 @@ public class Jetpack : MonoBehaviour
     public float JetpackStrength = 40;
     public bool IsFlying;
 
+    public float ParticleStartSpeedDivider =10;
     public float MaxEmissionRate = 150;
     public float EmissionAfterBurn = 150;
   
@@ -61,7 +62,7 @@ public class Jetpack : MonoBehaviour
 	        foreach (var jetpackstream in _jetpackstreams)
 	        {
 	            jetpackstream.emissionRate = MaxEmissionRate;
-	            jetpackstream.startSpeed = Fuel;
+	            jetpackstream.startSpeed = Fuel /ParticleStartSpeedDivider;
 	        }
 	    }
         IsFlying = false;
