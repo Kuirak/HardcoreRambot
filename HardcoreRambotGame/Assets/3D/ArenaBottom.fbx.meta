@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 2993a9c57919aff429ed9b2fd62294d1
+guid: 9f4e35254efae7f40a85088c18418a86
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Armature
-    100004: Bone
     400000: //RootNode
-    400002: Armature
-    400004: Bone
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube_018
+    4300000: Plane
+    6400000: //RootNode
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -30,9 +27,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 2
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
