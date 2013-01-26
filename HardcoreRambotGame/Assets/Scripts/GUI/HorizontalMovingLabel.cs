@@ -120,7 +120,7 @@ public class HorizontalMovingLabel : AnimatedGUIControl {
 	// Draw the label on screen
 	protected void Draw()
 	{
-		GUI.Box(textArea, "");
+//		GUI.Box(textArea, "");
 		GUI.Label(textArea, this.Text, GetStyle());
 	}
 	
