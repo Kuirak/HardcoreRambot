@@ -14,10 +14,6 @@ public class HorizontalMovingLabel : AnimatedGUIControl {
 	// For labels moving left, this is the final position of the left border.
 	public float StopPosition { get; set; }
 	
-    // Custom gui skin for labels
-    public GUISkin CustomSkin { get; set; }
-    public string StyleName { get; set; }
-	
 	// Controls which border is aligned to the stop position.
 	// i.e. If alignment is left, then the left border of the label is not allowed
 	// to cross the "StopPosition" vertical line.
@@ -51,9 +47,7 @@ public class HorizontalMovingLabel : AnimatedGUIControl {
 		this.displayAfter = displayAfter;
 
 		this.lastLayoutTime = 0;
-		this.firstTick = 0;
-		
-		this.StyleName = "label";
+		this.firstTick = 0;		
 	}
 	
 	protected void CalculateFrame()
@@ -65,12 +59,6 @@ public class HorizontalMovingLabel : AnimatedGUIControl {
 		textArea.height = textSize.y;
 	}
 
-	// Return the style for this label. 
-	protected GUIStyle GetStyle()
-	{
-		return GUIUtils.FindStyleOrDefault(this.StyleName, GUI.skin.label);
-	}
-	
 	// Move the text by updating the internal values.
 	protected void MoveText()
 	{

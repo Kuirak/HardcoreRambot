@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour {
     public float[] shootsPerMinute;
     public GameObject[] visibleWeapon;
     public float JitterStrength = 0.01f;
+	public GameObject muzzleFlash;
 
     float lastShotTime = 0;
 
@@ -18,6 +19,7 @@ public class Weapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButton("Fire1"))
+			GameObject.Instantiate(muzzleFlash, transform.position, transform.rotation);
             Shoot();
     }
 

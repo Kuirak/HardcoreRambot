@@ -15,10 +15,6 @@ public class HeartbeatLabel : AnimatedGUIControl {
 	// Maximum factor by which the label is enlarged
 	public float MaxSizeFactor { get; set; }
 	
-    // Custom gui skin for labels
-    public GUISkin CustomSkin { get; set; }
-    public string StyleName { get; set; }
-	
 	//
 	// Private
 	//
@@ -47,8 +43,6 @@ public class HeartbeatLabel : AnimatedGUIControl {
 		this.lastLayoutTime = 0;
 		this.firstTick = 0;
 		this.beatStart = -1;
-		
-		this.StyleName = "label";
 	}
 	
 	
@@ -59,7 +53,7 @@ public class HeartbeatLabel : AnimatedGUIControl {
 		{
 			this.beatStart = Time.time;
 			
-			this.style = new GUIStyle(GUIUtils.FindStyleOrDefault(this.StyleName, GUI.skin.label));
+			this.style = new GUIStyle(GetStyle());
 			this.originalFontSize = this.style.fontSize;
 		}
 		
