@@ -4,7 +4,7 @@ using System.Collections;
 public class Destroyable : MonoBehaviour {
 
     public float health = 100;
-    public GameObject deathPrefab;
+    public  GameObject deathPrefab;
     public Affiliation affiliation;
 
 	// Use this for initialization
