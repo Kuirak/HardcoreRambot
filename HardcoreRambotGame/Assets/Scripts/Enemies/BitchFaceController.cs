@@ -10,6 +10,9 @@ public class BitchFaceController : MonoBehaviour {
     CharacterController controller;
     Player player;
 
+    public bool selfdestruct = true;
+    public float selfdestructDamage = 0;
+
 	void Start () {
         controller = GetComponent<CharacterController>();
 
@@ -32,4 +35,35 @@ public class BitchFaceController : MonoBehaviour {
         controller.SimpleMove(forward * curSpeed * Time.deltaTime);
 
 	}
+
+    void OnTriggerEnter(Collider other)
+    //void OnCollisionEnter(Collision collisionInfo)
+    {
+        //Collider other = collisionInfo.collider;
+        Transform parent = other.transform.parent;
+        if (!parent)
+            return;
+
+        Affiliation player = parent.GetComponent<Affiliation>();
+        if (!player)
+            return;
+
+
+        if (player.GetType() == typeof(Player))
+        {
+            if (selfdestruct)
+            {
+                Destroyable playerDest = Player.instance.GetComponent<Destroyable>();
+                playerDest.receiveDamage(selfdestructDamage);
+
+                Destroyable d = GetComponent<Destroyable>();
+                if (d)
+                    d.Die();
+                else
+                {
+                    Destroy(transform.parent.gameObject);
+                }
+            }
+        }
+    }
 }
