@@ -1091,7 +1091,6 @@ MonoBehaviour:
   heartPower: 0
   level: 1
   levelUpHearts:
-  - 0
   - 5
   - 10
   - 20
@@ -1101,6 +1100,7 @@ MonoBehaviour:
   - 200
   - 300
   - 500
+  - 1000
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
