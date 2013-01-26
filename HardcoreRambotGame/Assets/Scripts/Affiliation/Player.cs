@@ -22,7 +22,7 @@ public class Player : Affiliation
 
     public void addHeartPower(float power)
     {
-        heartPower += heartPower;
+        heartPower += power;
 
         if (heartPower >= levelUpHearts[level - 1])
         {

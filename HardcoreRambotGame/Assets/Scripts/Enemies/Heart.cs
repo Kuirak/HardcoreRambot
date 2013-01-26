@@ -37,8 +37,10 @@ public class Heart : MonoBehaviour {
             if (d)
                 d.Die();
             else
-            {                
-                Destroy(transform.parent.gameObject);
+            {
+                Destroy(gameObject);
+                if (transform.parent)
+                    Destroy(transform.parent.gameObject);
             }
         }
 

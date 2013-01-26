@@ -11,6 +11,7 @@ public class CameraHeartBeat : MonoBehaviour {
     public float maxFreq = 160;
 
     float lastBeatTime = 0;
+    bool skip = false;
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +38,7 @@ public class CameraHeartBeat : MonoBehaviour {
                 col = Mathf.Lerp(1, 0, timeSinceLastBeat / len - len);
             else col = 0;
         //print(freq);
+        if (skip) col = 0;
 
         //Vector3 c = Mathf.Lerp(new Vector3(1, 1, 1), new Vector3(1, 0, 0), col);
         colorize.color = Color.Lerp(new Color(1, 1, 1, 1), new Color(1, healthPercent, healthPercent, 1), col);
@@ -44,8 +46,11 @@ public class CameraHeartBeat : MonoBehaviour {
 
         if (timeSinceLastBeat >= 1 / (freq/60))
         {
+            skip = (Random.Range(1, 100) < 5);           
+
             lastBeatTime = Time.time;
-            audio.Play();
+            if (!skip)
+                audio.Play();
         }
 	}
 }
