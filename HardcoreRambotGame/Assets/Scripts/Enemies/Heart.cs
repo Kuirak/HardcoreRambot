@@ -31,7 +31,7 @@ public class Heart : MonoBehaviour {
         if (player.GetType() == typeof(Player))
         {
             //print("herzhafte Colision " + other.name);
-            Player.addHeartPower(heartPower);
+            Player.instance.addHeartPower(heartPower);
 
             Destroyable d = GetComponent<Destroyable>();
             if (d)

@@ -3,11 +3,13 @@ using System.Collections;
 
 public class Player : Affiliation
 {
-    public static float heartPower = 0;
+    public float heartPower = 0;
+
+    public static Player instance;
 
 	// Use this for initialization
 	void Start () {
-	
+        instance = this;
 	}
 	
 	// Update is called once per frame
@@ -15,7 +17,7 @@ public class Player : Affiliation
 	
 	}
 
-    public static void addHeartPower(float power)
+    public void addHeartPower(float power)
     {
         heartPower += heartPower;
     }
