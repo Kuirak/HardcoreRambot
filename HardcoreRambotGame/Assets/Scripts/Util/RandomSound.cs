@@ -10,20 +10,23 @@ public class RandomSound : MonoBehaviour
 	void Start () {
 	
 	}
+
+    void Awake()
+    {
+        SetRandomSound();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
-    void Play()
+    void SetRandomSound()
     {
         var idx = Random.Range(0,AudioSources.Length-1);
 
         audio.clip = AudioSources[idx];
-
-        audio.pitch = Random.Range(0.9f, 1.1f);
-
+        
         audio.Play();
     }
 }
