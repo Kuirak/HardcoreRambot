@@ -19,7 +19,6 @@ public class Weapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButton("Fire1"))
-			GameObject.Instantiate(muzzleFlash, transform.position, transform.rotation);
             Shoot();
     }
 
@@ -30,7 +29,9 @@ public class Weapon : MonoBehaviour {
         if (Time.time > lastShotTime + 1 / shootsPerMinute[lvl-1])
         {
             lastShotTime = Time.time;
-            Instantiate(bullet[lvl - 1], transform.position, Quaternion.Lerp(transform.rotation,Random.rotation,JitterStrength) );
+            Quaternion r = Quaternion.Lerp(transform.rotation, Random.rotation, JitterStrength);
+            Instantiate(bullet[lvl - 1], transform.position, r );
+            Instantiate(muzzleFlash, transform.position, r);
         }
 	}
 }
