@@ -23,7 +23,7 @@ public class RambotCharacterController : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate ()
+	void Update ()
 	{
         var moveDir = Strafe();
         moveDir += Forward();
@@ -41,7 +41,7 @@ public class RambotCharacterController : MonoBehaviour
             Speed = new Vector3(Speed.x,0,Speed.z);
         }
 	    moveDir += Speed;
-	    moveDir *= Time.fixedDeltaTime;
+	    moveDir *= Time.deltaTime;
 	    _controller.Move(moveDir);
 	    
 	}
