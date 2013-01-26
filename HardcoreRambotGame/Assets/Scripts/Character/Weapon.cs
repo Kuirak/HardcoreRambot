@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButton("Fire1"))
+
             Shoot();
     }
 
@@ -28,6 +29,7 @@ public class Weapon : MonoBehaviour {
 
         if (Time.time > lastShotTime + 1 / shootsPerMinute[lvl-1])
         {
+            
             lastShotTime = Time.time;
             Quaternion r = Quaternion.Lerp(transform.rotation, Random.rotation, JitterStrength);
             Instantiate(bullet[lvl - 1], transform.position, r );
