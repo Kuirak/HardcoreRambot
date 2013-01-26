@@ -27,7 +27,7 @@ public class Weapon : MonoBehaviour {
         if (Time.time > lastShotTime + 1 / shootsPerMinute[lvl-1])
         {
             lastShotTime = Time.time;
-            GameObject.Instantiate(bullet[lvl - 1], transform.position, transform.rotation);
+            Instantiate(bullet[lvl - 1], transform.position, transform.rotation);
         }
 	}
 }
