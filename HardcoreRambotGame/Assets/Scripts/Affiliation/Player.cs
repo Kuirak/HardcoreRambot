@@ -4,6 +4,9 @@ using System.Collections;
 public class Player : Affiliation
 {
     public float heartPower = 0;
+    public int level = 1;
+
+    public float[] levelUpHearts;
 
     public static Player instance;
 
@@ -20,5 +23,7 @@ public class Player : Affiliation
     public void addHeartPower(float power)
     {
         heartPower += heartPower;
+
+        //if (heartPower > levelUpHearts[level]
     }
 }
