@@ -40,7 +40,7 @@ MonoBehaviour:
   spawn: {fileID: 100002, guid: 69d0c15c8ab12b544ac65fc5ac2b6231, type: 2}
   timeBetweenSpawns: 10
   minLevel: 1
-  maxLevel: 5
+  maxLevel: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
