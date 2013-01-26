@@ -903,7 +903,17 @@ MonoBehaviour:
   m_Name: 
   heartPower: 0
   level: 1
-  levelUpHearts: []
+  levelUpHearts:
+  - 0
+  - 5
+  - 10
+  - 20
+  - 50
+  - 100
+  - 150
+  - 200
+  - 300
+  - 500
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -915,7 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39404030d664f1429445a2efeb0814c, type: 3}
   m_Name: 
   health: 100
-  deathPrefab: {fileID: 0}
+  deathPrefab: {fileID: 100002, guid: 2cb70b0f244ce6f408f2b7280a464ec1, type: 2}
   affiliation: {fileID: 11400000, guid: 3fe77efa558ad7d489fdd7b2448bfea4, type: 2}
 --- !u!114 &11400014
 MonoBehaviour:
@@ -940,8 +950,28 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5c581acb7cbc24e8dae52b31762300, type: 3}
   m_Name: 
-  bullet: {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  shootsPerMinute: 10
+  bullet:
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  shootsPerMinute:
+  - 2
+  - 5
+  - 8
+  - 10
+  - 15
+  - 20
+  - 25
+  - 30
+  - 40
+  - 50
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
