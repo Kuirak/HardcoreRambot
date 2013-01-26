@@ -26,33 +26,34 @@ public class Bullet : MonoBehaviour {
             transform.Translate(transform.forward * speed);
 	}
 
-    void OnTriggerEnter(Collider other) 
-    //void OnCollisionEnter(Collision collisionInfo)
-    {
-
-
-        Destroyable target = other.GetComponent<Destroyable>();
-        if (!target)
-            return;
-
-
-        //print("Collision with " + destroyable.affiliation.GetType() + " and " + target.affiliation.GetType());
-        
-        if (destroyable.affiliation.GetType() != target.affiliation.GetType())  // No friendly fire and self-hit
-        {
-            target.receiveDamage(damage);
-
-            Destroyable d = GetComponent<Destroyable>();
-            if (d)
-                d.Die();
-            else
-                Destroy(this);
-
-            rigidbody.AddExplosionForce(100, transform.position, 100);
-        }
+    //void OnTriggerEnter(Collider other) 
+    ////void OnCollisionEnter(Collision collisionInfo)
+    //{
 
         
+      
+    //    Destroyable target = other.GetComponent<Destroyable>();
+    //  if(!target)
+    //        return;
 
 
-    }
+    //    //print("Collision with " + destroyable.affiliation.GetType() + " and " + target.affiliation.GetType());
+        
+    //    if (destroyable.affiliation.GetType() != target.affiliation.GetType())  // No friendly fire and self-hit
+    //    {
+    //        target.receiveDamage(damage);
+
+    //        Destroyable d = GetComponent<Destroyable>();
+    //        if (d)
+    //            d.Die();
+    //        else
+    //            Destroy(this);
+
+    //        rigidbody.AddExplosionForce(100, transform.position, 100);
+    //    }
+
+        
+
+
+   // }
 }

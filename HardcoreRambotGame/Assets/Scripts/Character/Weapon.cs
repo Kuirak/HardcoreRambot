@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour {
     public Transform[] bullet;
     public float[] shootsPerMinute;
     public GameObject[] visibleWeapon;
+	public GameObject muzzleFlash;
 
     float lastShotTime = 0;
 
@@ -17,6 +18,7 @@ public class Weapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButton("Fire1"))
+			GameObject.Instantiate(muzzleFlash, transform.position, transform.rotation);
             Shoot();
     }
 

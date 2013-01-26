@@ -1,15 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public abstract class AnimatedGUIControl {
+public abstract class AnimatedGUIControl : SkinnedGUIControl {
 	
 	public bool AnimationDone { get; set; }
-	
-	public AnimatedGUIControl()
+		
+	public AnimatedGUIControl() : base()
 	{
 		this.AnimationDone = false;
 	}
-	
-	// Update is called once per frame
-	public abstract void Tick ();
 }
