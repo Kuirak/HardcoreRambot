@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 48cc23a2f88a16d41b538eee9df7713d
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Eye
+    100004: Eye001
+    100006: Finger_R007
+    100008: Gelenk_L
+    100010: Gelenk_R
+    100012: Oberarm_L
+    100014: Oberarm_R
+    100016: Object001
+    100018: Plane001
+    100020: Schultergelenk_L
+    100022: Schultergelenk_R
+    100024: Sprengtank
+    100026: Unterarm_L_Weapon
+    100028: Unterarm_R
+    400000: //RootNode
+    400002: Eye
+    400004: Eye001
+    400006: Finger_R007
+    400008: Gelenk_L
+    400010: Gelenk_R
+    400012: Oberarm_L
+    400014: Oberarm_R
+    400016: Object001
+    400018: Plane001
+    400020: Schultergelenk_L
+    400022: Schultergelenk_R
+    400024: Sprengtank
+    400026: Unterarm_L_Weapon
+    400028: Unterarm_R
+    2300000: //RootNode
+    2300002: Eye
+    2300004: Eye001
+    2300006: Finger_R007
+    2300008: Gelenk_L
+    2300010: Gelenk_R
+    2300012: Oberarm_L
+    2300014: Oberarm_R
+    2300016: Object001
+    2300018: Plane001
+    2300020: Schultergelenk_L
+    2300022: Schultergelenk_R
+    2300024: Sprengtank
+    2300026: Unterarm_L_Weapon
+    2300028: Unterarm_R
+    3300000: //RootNode
+    3300002: Eye
+    3300004: Eye001
+    3300006: Finger_R007
+    3300008: Gelenk_L
+    3300010: Gelenk_R
+    3300012: Oberarm_L
+    3300014: Oberarm_R
+    3300016: Object001
+    3300018: Plane001
+    3300020: Schultergelenk_L
+    3300022: Schultergelenk_R
+    3300024: Sprengtank
+    3300026: Unterarm_L_Weapon
+    3300028: Unterarm_R
+    4300000: Enemie_Gound_Body
+    4300002: Oberarm_R
+    4300004: Gelenk_R
+    4300006: Object001
+    4300008: Schultergelenk_R
+    4300010: Unterarm_R
+    4300012: Finger_R007
+    4300014: Oberarm_L
+    4300016: Gelenk_L
+    4300018: Unterarm_L_Weapon
+    4300020: Plane001
+    4300022: Schultergelenk_L
+    4300024: Eye
+    4300026: Eye001
+    4300028: Sprengtank
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

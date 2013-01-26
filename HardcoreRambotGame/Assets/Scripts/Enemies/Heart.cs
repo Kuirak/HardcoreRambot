@@ -18,11 +18,12 @@ public class Heart : MonoBehaviour {
     //void OnTriggerEnter(Collider other)
     void OnCollisionEnter(Collision collisionInfo)
     {
-        print("herzhafte Colision");
-
-        Affiliation player = collisionInfo.collider.GetComponent<Affiliation>();
+        Collider other = collisionInfo.collider;
+        Affiliation player = other.GetComponent<Affiliation>();
+        print("herzhafte Colision " + other.name);
         if (!player)
             return;
+
 
         if (player.GetType() == typeof(Player))
         {

@@ -27,6 +27,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
+  - 114: {fileID: 11400000}
+  - 54: {fileID: 5400000}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -82,6 +84,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 4300000, guid: 52dbaac166373e34aa6a4ccc1c4615fa, type: 3}
+--- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!95 &9500000
 Animator:
   m_ObjectHideFlags: 1
@@ -94,6 +111,17 @@ Animator:
   m_CullingMode: 1
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053216e6779461c448c8c2c8d1649dd8, type: 3}
+  m_Name: 
+  dieAfter: 10
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -104,8 +132,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .0296738353
-  m_Center: {x: -.00317058526, y: -1.84379462e-06, z: -.00366425887}
+  m_Radius: 2.96738338
+  m_Center: {x: -.317058444, y: -.000172592641, z: -.366473079}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
