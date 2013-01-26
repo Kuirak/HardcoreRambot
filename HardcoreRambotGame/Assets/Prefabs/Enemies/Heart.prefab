@@ -26,7 +26,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
-  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -60,6 +59,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 135: {fileID: 13500002}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -132,8 +132,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .559437752, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.18891811, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400012}
   - {fileID: 400004}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100006}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7239fd22d850b3244ae343ff1f79ca74, type: 3}
@@ -262,8 +262,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .379999995
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: .280000001
+  m_Center: {x: 0, y: -.209999993, z: 0}
 --- !u!135 &13500002
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -274,7 +274,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
