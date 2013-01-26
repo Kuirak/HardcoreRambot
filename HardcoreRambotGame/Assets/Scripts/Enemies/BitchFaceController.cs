@@ -36,6 +36,7 @@ public class BitchFaceController : MonoBehaviour {
         
         Vector3 forward = transform.TransformDirection(Vector3.forward);
 
+        /*
                 // Jetpack
         float playerAbove = player.transform.position.y - transform.position.y;
         if (playerAbove > 4)
@@ -44,10 +45,10 @@ public class BitchFaceController : MonoBehaviour {
 
         }
         jpspeed -= gravity;
-        jpspeed = 0;// Mathf.Clamp(jpspeed, -maxfall, maxfall);
+        jpspeed = 0;// Mathf.Clamp(jpspeed, -maxfall, maxfall);*/
 
         float curSpeed = maxSpeed * Mathf.Clamp((90 - angleToTarget) / 90, 0, 1) * Mathf.Clamp((distToPlayerProj-maxDistanceToPlayer) / maxDistanceToPlayer, 0, 1);
-        controller.Move(forward * curSpeed * Time.deltaTime + Vector3.up * jpspeed);
+        controller.SimpleMove(forward * curSpeed * Time.deltaTime);
 
 
 
