@@ -43,6 +43,7 @@ public class CameraHeartBeat : MonoBehaviour {
         //Vector3 c = Mathf.Lerp(new Vector3(1, 1, 1), new Vector3(1, 0, 0), col);
         colorize.color = Color.Lerp(new Color(1, 1, 1, 1), new Color(1, healthPercent, healthPercent, 1), col);
         audio.pitch = Mathf.Lerp(0.8f, 1.5f, 1-healthPercent);
+        audio.volume = Mathf.Lerp(0.5f, 1.0f, 1 - healthPercent);
 
         if (timeSinceLastBeat >= 1 / (freq/60))
         {

@@ -29,6 +29,9 @@ public class Player : Affiliation
             Weapon w = FindObjectOfType(typeof(Weapon)) as Weapon;
             level++;
 
+            Destroyable d = GetComponent<Destroyable>();
+            d.reset();
+
             for (int i=0;i<w.visibleWeapon.Length;i++)
                 if (w.visibleWeapon[i])
                     w.visibleWeapon[i].gameObject.SetActive(level-1 == i);
