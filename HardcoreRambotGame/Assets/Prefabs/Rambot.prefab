@@ -1139,15 +1139,15 @@ MonoBehaviour:
   m_Name: 
   bullet:
   - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
-  - {fileID: 11400002, guid: 6b0c75c60e6f89b40897fe73f5a70680, type: 2}
+  - {fileID: 11400002, guid: 7389bb3912aa2bc4db0b4d282f456a21, type: 2}
+  - {fileID: 11400002, guid: 54a291bdd9c24a349a057a2a7cb660cc, type: 2}
+  - {fileID: 11400002, guid: 46c22d47c4aa6284b963484e13975e22, type: 2}
+  - {fileID: 11400002, guid: 9b668e803c66f5f498283b08f2779270, type: 2}
+  - {fileID: 11400002, guid: 110d7022c69426344817ef5731096fa4, type: 2}
+  - {fileID: 11400002, guid: 818a91430972a1442b1eb1658e7d93a2, type: 2}
+  - {fileID: 11400002, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
+  - {fileID: 11400002, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
+  - {fileID: 11400002, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
   shootsPerMinute:
   - 2
   - 5
