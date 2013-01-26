@@ -9,7 +9,7 @@ public class Jetpack : MonoBehaviour
     public float RefillRate = 8;
     public float Offset = 10;
     public float JetpackStrength = 40;
-    
+    public bool IsFlying;
 
     public float MaxEmissionRate = 150;
     public float EmissionAfterBurn = 150;
@@ -31,7 +31,7 @@ public class Jetpack : MonoBehaviour
         var jump = Input.GetButton("Jump");
         if (Fuel + RefillRate * Time.deltaTime < MaxFuel && !jump)
         {
-            Debug.Log("refill" + Fuel);
+           
             Fuel += RefillRate * Time.deltaTime;
 
         }
@@ -45,23 +45,25 @@ public class Jetpack : MonoBehaviour
                     jetpackstream.emissionRate -= EmissionAfterBurn * Time.deltaTime;
                 }
             }
+            IsFlying = false;
             return;
 	    }
-	    if(Fuel> BurnRate*Time.deltaTime)
+        
+        
+	    if(Fuel +0.5f > BurnRate*Time.deltaTime && Fuel>0)
 	    {
+	        IsFlying = true;
 	        Fuel -= BurnRate*Time.deltaTime;
 	        var moveDir = Vector3.up*JetpackStrength;
-           
             moveDir += _controller.velocity.normalized;
 	        moveDir *= Time.deltaTime;
 	        _controller.Move(moveDir);
-       
 	        foreach (var jetpackstream in _jetpackstreams)
 	        {
 	            jetpackstream.emissionRate = MaxEmissionRate;
 	            jetpackstream.startSpeed = Fuel;
 	        }
 	    }
-        
+        IsFlying = false;
 	}
 }
