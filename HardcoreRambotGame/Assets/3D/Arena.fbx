@@ -12,8 +12,8 @@ FBXHeaderExtension:  {
 		Month: 01
 		Day: 26
 		Hour: 04
-		Minute: 04
-		Second: 40
+		Minute: 12
+		Second: 43
 		Millisecond: 0
 	}
 	Creator: "FBX SDK/FBX Plugins build 20070228"
@@ -21,7 +21,7 @@ FBXHeaderExtension:  {
 		FlagPLE: 0
 	}
 }
-CreationTime: "2013-01-26 04:04:40:000"
+CreationTime: "2013-01-26 04:12:43:000"
 Creator: "Blender version 2.64 (sub 0)"
 
 ; Object definitions
@@ -142,7 +142,7 @@ Objects:  {
 		CameraName: 100
 		CameraIndexName:
 	}
-	Model: "Model::Cube", "Mesh" {
+	Model: "Model::Cube_006", "Mesh" {
 		Version: 232
 		Properties60:  {
 			Property: "QuaternionInterpolate", "bool", "",0
@@ -3842,7 +3842,7 @@ Objects:  {
 		}
 		NbPoseNodes: 1
 		PoseNode:  {
-			Node: "Model::Cube"
+			Node: "Model::Cube_006"
 			Matrix: -0.000755687535275,0.000000000000000,1.746475934982300,0.000000000000000,3.755720376968384,0.000000000000000,0.001624595257454,0.000000000000000,0.000000000000000,2.175894260406494,0.000000000000000,0.000000000000000,1.377486467361450,0.000000000000000,0.260125637054443,1.000000000000000
 		}
 	}
@@ -3864,7 +3864,7 @@ Objects:  {
 ;------------------------------------------------------------------
 
 Relations:  {
-	Model: "Model::Cube", "Mesh" {
+	Model: "Model::Cube_006", "Mesh" {
 	}
 	Model: "Model::Producer Perspective", "Camera" {
 	}
@@ -3894,9 +3894,9 @@ Relations:  {
 ;------------------------------------------------------------------
 
 Connections:  {
-	Connect: "OO", "Model::Cube", "Model::Scene"
-	Connect: "OO", "Material::Material_003__ARENAUVLAYOUT_jpg", "Model::Cube"
-	Connect: "OO", "Texture::ARENAUVLAYOUT_jpg", "Model::Cube"
+	Connect: "OO", "Model::Cube_006", "Model::Scene"
+	Connect: "OO", "Material::Material_003__ARENAUVLAYOUT_jpg", "Model::Cube_006"
+	Connect: "OO", "Texture::ARENAUVLAYOUT_jpg", "Model::Cube_006"
 	Connect: "OO", "Video::ARENAUVLAYOUT_jpg", "Texture::ARENAUVLAYOUT_jpg"
 }
 ;Takes and animation section
@@ -3911,7 +3911,7 @@ Takes:  {
 
 		;Models animation
 		;----------------------------------------------------
-		Model: "Model::Cube" {
+		Model: "Model::Cube_006" {
 			Version: 1.1
 			Channel: "Transform" {
 				Channel: "T" {
