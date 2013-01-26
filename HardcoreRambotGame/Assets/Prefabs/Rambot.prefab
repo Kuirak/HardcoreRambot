@@ -566,10 +566,11 @@ MonoBehaviour:
   m_Name: 
   Fuel: 10
   MaxFuel: 10
-  BurnRate: 15
-  RefillRate: 8
+  BurnRate: 12
+  RefillRate: 10
   Offset: 10
   JetpackStrength: 40
+  IsFlying: 0
   MaxEmissionRate: 150
   EmissionAfterBurn: 150
 --- !u!114 &11400008
