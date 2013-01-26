@@ -6,14 +6,17 @@ ModelImporter:
     100000: //RootNode
     100002: Armature
     100004: Bone
+    100006: Cube_018
     400000: //RootNode
     400002: Armature
     400004: Bone
+    400006: Cube_018
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube_018
     7400000: Default Take
     9500000: //RootNode
+    13700000: Cube_018
   materials:
     importMaterials: 1
     materialName: 0
