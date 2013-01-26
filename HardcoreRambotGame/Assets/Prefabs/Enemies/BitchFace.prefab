@@ -761,7 +761,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 102b8cc577440bf4ea59677a0dfa19c7, type: 2}
+  - {fileID: 2100000, guid: d4f1097306d90374bb55edfd9307702c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -925,6 +925,8 @@ MonoBehaviour:
   turnSpeed: 2
   maxMoveAngle: 90
   maxDistanceToPlayer: 1
+  selfdestruct: 1
+  selfdestructDamage: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

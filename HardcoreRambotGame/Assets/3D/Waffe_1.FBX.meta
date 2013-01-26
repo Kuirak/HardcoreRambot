@@ -1,17 +1,20 @@
 fileFormatVersion: 2
-guid: 9269c4bd6d6baa44e99dcde83eeb0af1
+guid: c58b22054244a8a4085af53938d72126
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: Cylinder080
-    100002: Object022
-    100004: //RootNode
-    400000: Cylinder080
-    400002: Object022
-    400004: //RootNode
-    2300000: Cylinder080
-    3300000: Cylinder080
+    100000: //RootNode
+    100002: Cylinder080
+    100004: Object022
+    400000: //RootNode
+    400002: Cylinder080
+    400004: Object022
+    2300000: //RootNode
+    2300002: Cylinder080
+    3300000: //RootNode
+    3300002: Cylinder080
     4300000: Cylinder080
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
