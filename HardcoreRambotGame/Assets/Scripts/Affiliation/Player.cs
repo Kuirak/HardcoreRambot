@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Player : Affiliation
 {
+    public static float heartPower = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -13,4 +14,9 @@ public class Player : Affiliation
 	void Update () {
 	
 	}
+
+    public static void addHeartPower(float power)
+    {
+        heartPower += heartPower;
+    }
 }
