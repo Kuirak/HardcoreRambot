@@ -30,7 +30,10 @@ public class RambotCharacterController : MonoBehaviour
             Speed = Vector3.zero;
         }
 	    Speed += Jump();
-	    Speed += Physics.gravity * GravityStrength;
+        if (!Input.GetButton("Jump"))
+        {
+            Speed += Physics.gravity*GravityStrength;
+        }
 	    moveDir += Speed;
 	    moveDir *= Time.fixedDeltaTime;
 	    _controller.Move(moveDir);
