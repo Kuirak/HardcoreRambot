@@ -4,7 +4,11 @@ ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: Bone
     400000: //RootNode
+    400002: Armature
+    400004: Bone
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube_018
