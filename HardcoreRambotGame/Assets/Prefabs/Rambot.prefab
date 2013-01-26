@@ -4129,14 +4129,14 @@ MonoBehaviour:
   - {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
   - {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
   shootsPerMinute:
-  - 2
   - 5
   - 8
   - 10
-  - 15
-  - 20
-  - 25
-  - 30
+  - 13
+  - 17
+  - 21
+  - 28
+  - 33
   - 40
   - 50
   visibleWeapon:
@@ -4150,6 +4150,8 @@ MonoBehaviour:
   - {fileID: 100058}
   - {fileID: 100058}
   - {fileID: 100058}
+  JitterStrength: .00999999978
+  muzzleFlash: {fileID: 0}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1

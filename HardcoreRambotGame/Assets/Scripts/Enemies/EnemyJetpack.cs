@@ -15,6 +15,12 @@ public class EnemyJetpack : MonoBehaviour
     public float MaxEmissionRate = 150;
     public float EmissionAfterBurn = 150;
 
+    public float activationDist = 4;
+    public float randomActivationDist = 20;
+
+    float activationDistAdd = 0;
+    float jppow = 1;
+
     Player player;
 
     private CharacterController _controller;
@@ -27,13 +33,15 @@ public class EnemyJetpack : MonoBehaviour
 	    _jetpackstreams = jetpack.GetComponentsInChildren<ParticleSystem>();
 
         player = FindObjectOfType(typeof(Player)) as Player;
+        activationDistAdd = Random.value * randomActivationDist;
+        jppow = Random.value * 0.2f + 0.9f;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
         float playerAbove = player.transform.position.y - transform.position.y;
-        bool jump = (playerAbove > 4);
+        bool jump = (playerAbove > activationDist + activationDistAdd);
        
         if (Fuel + RefillRate * Time.deltaTime < MaxFuel && !jump)
         {
@@ -60,7 +68,7 @@ public class EnemyJetpack : MonoBehaviour
 	    {
 	        IsFlying = true;
 	        Fuel -= BurnRate*Time.deltaTime;
-	        var moveDir = Vector3.up*JetpackStrength;
+            var moveDir = Vector3.up * JetpackStrength * jppow;
             moveDir += _controller.velocity.normalized;
 	        moveDir *= Time.deltaTime;
 	        _controller.Move(moveDir);

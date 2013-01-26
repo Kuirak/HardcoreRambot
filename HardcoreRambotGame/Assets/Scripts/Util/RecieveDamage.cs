@@ -17,7 +17,6 @@ public class RecieveDamage : MonoBehaviour
 	// Update is called once per frame
 	void OnTriggerEnter (Collider other)
 	{
-
 	    var bullet = other.GetComponent<Bullet>();
         if(!bullet)return;
         _destroyable.receiveDamage(bullet.damage);
