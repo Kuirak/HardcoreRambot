@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour {
 
-    public Bullet[] bullet;
+    public Transform[] bullet;
     public float[] shootsPerMinute;
     public GameObject[] visibleWeapon;
 

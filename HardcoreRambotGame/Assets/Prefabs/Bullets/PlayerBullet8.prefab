@@ -17,6 +17,7 @@ GameObject:
   - 82: {fileID: 8200000}
   - 114: {fileID: 11400004}
   - 135: {fileID: 13500000}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: PlayerBullet8
   m_TagString: Untagged
@@ -210,6 +211,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c545ade043c3d6b478229be227b6173c, type: 3}
   - {fileID: 8300000, guid: 88930903315b952418fa4ab392583176, type: 3}
   - {fileID: 8300000, guid: 79f69f54236c97446bfdd6445d239752, type: 3}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053216e6779461c448c8c2c8d1649dd8, type: 3}
+  m_Name: 
+  dieAfter: 1
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
