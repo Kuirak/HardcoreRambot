@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour {
     public Transform[] bullet;
     public float[] shootsPerMinute;
     public GameObject[] visibleWeapon;
+    public float JitterStrength = 0.01f;
 
     float lastShotTime = 0;
 
@@ -27,7 +28,7 @@ public class Weapon : MonoBehaviour {
         if (Time.time > lastShotTime + 1 / shootsPerMinute[lvl-1])
         {
             lastShotTime = Time.time;
-            Instantiate(bullet[lvl - 1], transform.position, transform.rotation);
+            Instantiate(bullet[lvl - 1], transform.position, Quaternion.Lerp(transform.rotation,Random.rotation,JitterStrength) );
         }
 	}
 }
