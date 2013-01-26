@@ -82,6 +82,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 114: {fileID: 11400004}
+  - 136: {fileID: 13600000}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -296,8 +297,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.05941749, y: -2.07472038, z: .656847775}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: -3.05941749, y: -1.90823078, z: .656847775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
@@ -307,8 +308,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.61117554, y: -2.06191301, z: .656848192}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: -2.61117554, y: -1.9594574, z: .656848192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
@@ -536,8 +537,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 479be085aca2f1349a98780ca2e05415, type: 3}
   m_Name: 
-  ForwardSpeed: 15
-  StrafeSpeed: 15
+  ForwardSpeed: 20
+  StrafeSpeed: 20
   JumpStrength: 20
   Body: {fileID: 400008}
   GravityStrength: .100000001
@@ -563,14 +564,14 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d03485f17ee0cf4478cb652ce77f7ccf, type: 3}
   m_Name: 
-  Fuel: 100
-  MaxFuel: 100
-  BurnRate: 10
+  Fuel: 10
+  MaxFuel: 10
+  BurnRate: 15
   RefillRate: 8
-  JetpackStrength: 100
-  GravityStrength: .100000001
-  MaxEmissionRate: 50
-  EmissionAfterBurn: 50
+  Offset: 10
+  JetpackStrength: 40
+  MaxEmissionRate: 150
+  EmissionAfterBurn: 150
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -613,6 +614,19 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
+--- !u!136 &13600000
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &14300000
 CharacterController:
   m_ObjectHideFlags: 1
@@ -677,7 +691,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 0
+      scalar: 8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -842,7 +856,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 2.42143869e-08
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -864,14 +878,14 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 1
-    gravityModifier: 7.98000002
+    gravityModifier: 0
     inheritVelocity: 0
     maxNumParticles: 1000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 4
-    radius: .00999999978
+    type: 5
+    radius: .49000001
     angle: 27.7000008
     length: 5
     boxX: .100000001
@@ -884,7 +898,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 54.6199989
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1723,7 +1737,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 0
+      scalar: 8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1888,7 +1902,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 2.42143869e-08
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1910,14 +1924,14 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 1
-    gravityModifier: 7.98000002
+    gravityModifier: 0
     inheritVelocity: 0
     maxNumParticles: 1000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 4
-    radius: .00999999978
+    type: 5
+    radius: .49000001
     angle: 27.7000008
     length: 5
     boxX: .100000001
@@ -1930,7 +1944,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 54.6199989
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
