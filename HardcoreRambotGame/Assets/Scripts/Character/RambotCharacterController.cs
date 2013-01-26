@@ -36,6 +36,10 @@ public class RambotCharacterController : MonoBehaviour
         {
             Speed += Physics.gravity*GravityStrength;
         }
+        if(_jetpack.IsFlying && _controller.velocity.y <0)
+        {
+            Speed = new Vector3(Speed.x,0,Speed.z);
+        }
 	    moveDir += Speed;
 	    moveDir *= Time.fixedDeltaTime;
 	    _controller.Move(moveDir);
