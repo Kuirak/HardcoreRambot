@@ -15,25 +15,31 @@ public class Heart : MonoBehaviour {
 	
 	}
 
-    //void OnTriggerEnter(Collider other)
-    void OnCollisionEnter(Collision collisionInfo)
+    void OnTriggerEnter(Collider other)
+    //void OnCollisionEnter(Collision collisionInfo)
     {
-        Collider other = collisionInfo.collider;
-        Affiliation player = other.GetComponent<Affiliation>();
-        print("herzhafte Colision " + other.name);
+        //Collider other = collisionInfo.collider;
+        Transform parent = other.transform.parent;
+        if (!parent)
+            return;
+
+        Affiliation player = parent.GetComponent<Affiliation>();
         if (!player)
             return;
 
 
         if (player.GetType() == typeof(Player))
         {
+            //print("herzhafte Colision " + other.name);
             Player.addHeartPower(heartPower);
 
             Destroyable d = GetComponent<Destroyable>();
             if (d)
                 d.Die();
             else
-                Destroy(this);
+            {                
+                Destroy(transform.parent.gameObject);
+            }
         }
 
 
