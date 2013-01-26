@@ -26,7 +26,12 @@ public class Player : Affiliation
 
         if (heartPower >= levelUpHearts[level - 1])
         {
+            Weapon w = FindObjectOfType(typeof(Weapon)) as Weapon;
             level++;
+
+            for (int i=0;i<w.visibleWeapon.Length;i++)
+                if (w.visibleWeapon[i])
+                    w.visibleWeapon[i].gameObject.SetActive(level-1 == i);
             print("Level Up!! Now: "+level);
         }
     }

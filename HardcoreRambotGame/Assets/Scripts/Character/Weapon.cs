@@ -5,6 +5,7 @@ public class Weapon : MonoBehaviour {
 
     public Bullet[] bullet;
     public float[] shootsPerMinute;
+    public GameObject[] visibleWeapon;
 
     float lastShotTime = 0;
 
