@@ -7,9 +7,16 @@ public class Destroyable : MonoBehaviour {
     public  GameObject deathPrefab;
     public Affiliation affiliation;
 
+    float originalHealth;
+
+    public void reset()
+    {
+        health = originalHealth;
+    }
+
 	// Use this for initialization
 	void Start () {
-	
+        originalHealth = health;
 	}
 	
 	// Update is called once per frame
