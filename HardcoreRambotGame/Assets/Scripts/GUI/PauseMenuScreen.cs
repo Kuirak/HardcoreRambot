@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class StartMenuScreen : MonoBehaviour {
+public class PauseMenuScreen : MonoBehaviour
+{
 
+    public MouseLock game;
 	protected GameObject player = null;
 	public GUISkin skin;
 	
@@ -13,12 +15,14 @@ public class StartMenuScreen : MonoBehaviour {
 	
 	protected int selectedButtonIndex;
 	
-	const int MENU_INDEX_LETSROLL = 0;
-	const int MENU_INDEX_CREDITS = 1;
+	const int MENU_INDEX_CONTINUE = 0;
+	const int MENU_INDEX_RESTART = 1;
+	const int MENU_INDEX_EXIT = 2;
 	
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
+	    game = GetComponent<MouseLock>();
 		Reset ();
 	}
 	
@@ -43,7 +47,7 @@ public class StartMenuScreen : MonoBehaviour {
 		//
 		
 		textArea = new Rect(0, 40, Screen.width, Screen.height);
-		ctrl = new SimpleLabel("HeartCore    Rambot", textArea);
+		ctrl = new SimpleLabel("Having a smoke...", textArea);
 		ctrl.CustomSkin = this.skin;
 		ctrl.StyleName = "StartMenuHeader";
 		labels.Add(ctrl);
@@ -53,7 +57,7 @@ public class StartMenuScreen : MonoBehaviour {
 		//
 		
 		textArea = new Rect(0, 80, Screen.width, Screen.height);
-		ctrl = new SimpleLabel("(that's you!)", textArea);
+		ctrl = new SimpleLabel("(switched off robot power, too)", textArea);
 		ctrl.CustomSkin = this.skin;
 		ctrl.StyleName = "StartMenuSubHeader";
 		labels.Add(ctrl);
@@ -74,7 +78,7 @@ public class StartMenuScreen : MonoBehaviour {
 		//
 		//
 		
-		controlPosition = new Vector2(20, 30);
+		controlPosition = new Vector2(20, Screen.height - 100);
 		stopPosition = controlPosition.x + 150;
 		speed = 100;
 		ctrl = new HorizontalPatrollingLabel("A", speed, controlPosition, stopPosition);
@@ -86,7 +90,7 @@ public class StartMenuScreen : MonoBehaviour {
 		//
 		//
 		
-		controlPosition = new Vector2(Screen.width - 300, Screen.height - 100);
+		controlPosition = new Vector2(Screen.width - 200, 30);
 		stopPosition = controlPosition.x + 200;
 		speed = -50;
 		ctrl = new HorizontalPatrollingLabel("B", speed, controlPosition, stopPosition);
@@ -108,7 +112,7 @@ public class StartMenuScreen : MonoBehaviour {
 		//
 		//
 		
-		ctrl = new MenuButton("Let's roll!", buttonArea);
+		ctrl = new MenuButton("Jump back in", buttonArea);
 		ctrl.CustomSkin = this.skin;
 		ctrl.StyleName = "MenuButton";
 		ctrl.HighlightedStyleName = "MenuButtonHighlighted";
@@ -119,7 +123,18 @@ public class StartMenuScreen : MonoBehaviour {
 		//
 		
 		buttonArea.y += spacingBetweenLines;
-		ctrl = new MenuButton("Credits", buttonArea);
+		ctrl = new MenuButton("Restart", buttonArea);
+		ctrl.CustomSkin = this.skin;
+		ctrl.StyleName = "MenuButton";
+		ctrl.HighlightedStyleName = "MenuButtonHighlighted";
+		this.menuButtons.Add(ctrl);
+		
+		//
+		//
+		//
+		
+		buttonArea.y += spacingBetweenLines;
+		ctrl = new MenuButton("Exit to menu", buttonArea);
 		ctrl.CustomSkin = this.skin;
 		ctrl.StyleName = "MenuButton";
 		ctrl.HighlightedStyleName = "MenuButtonHighlighted";
@@ -154,7 +169,7 @@ public class StartMenuScreen : MonoBehaviour {
 		}
 		
 		Rect buttonArea = this.menuButtons[selectedButtonIndex].ButtonArea;
-		buttonArea.x += 60;
+		buttonArea.x += 30;
 		this.boeppelButton.ButtonArea = buttonArea;
 		this.boeppelButton.Tick();
 	}
@@ -174,22 +189,30 @@ public class StartMenuScreen : MonoBehaviour {
 		menuButtons[this.selectedButtonIndex].Highlighted = true;
 	}
 	
-	protected void LetsRoll()
+	protected void Continue()
+	{
+	    this.enabled = false;
+	    Reset();
+        if(!game)return;
+	    game.Resume();
+	}
+	
+	protected void RestartLevel()
 	{
 		Application.LoadLevel("Arena");
 	}
 	
-	protected void ShowCredits()
+	protected void ExitToMainMenu()
 	{
-		Debug.Log("Credits");
-		Application.LoadLevel("Credits");
+		Application.LoadLevel("StartMenu");
 	}
 	
 	public void OnGUI()
     {
         if (!enabled)
 			return;
-		
+	
+
 		if (this.labels.Count == 0)
 			SetupLabels();
 	
@@ -216,6 +239,11 @@ public class StartMenuScreen : MonoBehaviour {
 			{
 				UpdateSelectedIndex(1);
 			}
+            else if (Event.current.Equals(Event.KeyboardEvent("escape")))
+    		{
+    		    Continue();
+    		}
+    		
 			else if (
 					Event.current.Equals(Event.KeyboardEvent ("return")) ||
 				 	Event.current.Equals(Event.KeyboardEvent ("space"))
@@ -223,17 +251,21 @@ public class StartMenuScreen : MonoBehaviour {
 			{
 				switch (this.selectedButtonIndex)
 				{
-				case MENU_INDEX_LETSROLL:
-					LetsRoll();
-					break;
-				case MENU_INDEX_CREDITS:
-					ShowCredits();
-					break;
+				case MENU_INDEX_CONTINUE:
+					Continue();
+					return;
+				case MENU_INDEX_RESTART:
+					RestartLevel();
+					return;
+				case MENU_INDEX_EXIT:
+					ExitToMainMenu();
+					return;
 				default:
 					break;
 				}
 			}
 			
+			GUI.Box (new Rect(0, 0, Screen.width, Screen.height), "");
 			DrawControls();
 		}
 		finally

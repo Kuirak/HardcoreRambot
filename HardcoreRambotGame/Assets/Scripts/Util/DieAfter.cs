@@ -16,7 +16,7 @@ public class DieAfter : MonoBehaviour {
         if (dieAfter > 0)
         {
             dieAfter -= Time.deltaTime;
-            if (dieAfter <= 0)
+            if (dieAfter <= 0 && gameObject !=null)
                 Destroy(gameObject);
         }
 	

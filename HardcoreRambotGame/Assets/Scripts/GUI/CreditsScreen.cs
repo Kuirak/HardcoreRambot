@@ -231,16 +231,9 @@ public class CreditsScreen : MonoBehaviour {
 
 	protected void DrawControls()
 	{
-		bool captionAnimationsDone = true;
-		
 		foreach (AnimatedGUIControl ctrl in controls)
 		{
 			ctrl.Tick();
-
-			if (!ctrl.AnimationDone)
-			{
-				//break;
-			}
 		}
 	}
 	
