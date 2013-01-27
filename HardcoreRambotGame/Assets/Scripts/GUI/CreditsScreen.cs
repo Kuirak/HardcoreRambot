@@ -255,11 +255,11 @@ public class CreditsScreen : MonoBehaviour {
 			
 			GUI.Box (new Rect(0,0,Screen.width,Screen.height), "");
 
-			if (Event.current.type == EventType.keyDown)
+			if (Event.current.isKey || Event.current.isMouse)
 			{
 				Application.LoadLevel("StartMenu");
 			}
-
+			
 			DrawControls();
 		}
 		finally

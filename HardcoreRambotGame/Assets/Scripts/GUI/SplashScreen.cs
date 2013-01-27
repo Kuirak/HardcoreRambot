@@ -21,7 +21,7 @@ public class SplashScreen : MonoBehaviour {
 		// Call coroutine to hold splash screen up for a given amount of time
         StartCoroutine (SplashHold());
 
-		if (Event.current.type == EventType.keyDown)
+		if (Event.current.isKey || Event.current.isMouse)
 		{
 			Application.LoadLevel("StartMenu");
 		}
