@@ -23,7 +23,7 @@ public class Player : Affiliation
     public void addHeartPower(float power)
     {
         heartPower += power;
-
+        if(level>7) return;
         if (heartPower >= levelUpHearts[level - 1])
         {
             Weapon w = FindObjectOfType(typeof(Weapon)) as Weapon;
