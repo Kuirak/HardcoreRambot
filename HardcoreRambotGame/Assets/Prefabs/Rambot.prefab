@@ -67,6 +67,7 @@ GameObject:
   - 114: {fileID: 11400022}
   - 114: {fileID: 11400024}
   - 82: {fileID: 8200000}
+  - 45: {fileID: 4500000}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1482,7 +1483,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 3.26225519, y: 49.2677193, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -2495,7 +2496,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -2513,7 +2514,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_HDR: 0
+  m_HDR: 1
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -3789,6 +3790,14 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100170}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!45 &4500000
+Skybox:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
 --- !u!81 &8100000
 AudioListener:
   m_ObjectHideFlags: 1
@@ -3805,10 +3814,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: e1f57cd407ebdf447bcf410d7d108e8d, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -4012,11 +4021,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 479be085aca2f1349a98780ca2e05415, type: 3}
   m_Name: 
-  ForwardSpeed: 20
-  StrafeSpeed: 20
-  JumpStrength: 20
+  ForwardSpeed: 17
+  StrafeSpeed: 17
+  JumpStrength: 5
   Body: {fileID: 400008}
-  GravityStrength: .100000001
+  GravityStrength: .0500000007
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4040,11 +4049,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03485f17ee0cf4478cb652ce77f7ccf, type: 3}
   m_Name: 
   Fuel: 20
-  MaxFuel: 10
-  BurnRate: 12
+  MaxFuel: 20
+  BurnRate: 7
   RefillRate: 10
   Offset: 10
-  JetpackStrength: 40
+  JetpackStrength: 60
   IsFlying: 0
   ParticleStartSpeedDivider: 10
   MaxEmissionRate: 300
@@ -4073,10 +4082,10 @@ MonoBehaviour:
   heartPower: 0
   level: 1
   levelUpHearts:
-  - 5
-  - 10
+  - 8
   - 20
-  - 50
+  - 30
+  - 60
   - 100
   - 150
   - 200
@@ -4153,7 +4162,7 @@ MonoBehaviour:
   - {fileID: 100058}
   - {fileID: 100058}
   JitterStrength: .00999999978
-  Particle: {fileID: 0}
+  muzzleFlash: {fileID: 100000, guid: 16fcb28e736ced54a9a0050fa5afab5c, type: 2}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
