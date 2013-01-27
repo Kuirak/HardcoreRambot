@@ -187,7 +187,7 @@ public class StartMenuScreen : MonoBehaviour {
 	
 	protected void LetsRoll()
 	{
-		Debug.Log("Let's roll!");
+		Application.LoadLevel("Arena");
 	}
 	
 	protected void ShowCredits()
