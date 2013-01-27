@@ -1,55 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUI/StartMenuScreen.cs">
-    <Files>
-      <File FileName="Assets/Scripts/GUI/StartMenuScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/HorizontalPatrollingLabel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/SimpleLabel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/EndgameScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Util/GUIUtils.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/HorizontalMovingLabel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/HeartbeatLabel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/AnimatedGUIControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/SkinnedGUIControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/MenuButton.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GUI/CreditsScreen.cs" Line="1" Column="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="GUI" expanded="True">
-                  <Node name="StartMenuScreen.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-          <Node name="Assembly-CSharp-firstpass" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Standard Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="General Scripts" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-          <Node name="Assembly-UnityScript-firstpass" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Standard Assets" expanded="True">
-                <Node name="Character Controllers" expanded="True">
-                  <Node name="Sources" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
