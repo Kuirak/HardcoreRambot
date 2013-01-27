@@ -230,7 +230,8 @@ public class StartMenuScreen : MonoBehaviour {
 			}
 			else if (
 					Event.current.Equals(Event.KeyboardEvent ("return")) ||
-				 	Event.current.Equals(Event.KeyboardEvent ("space"))
+				 	Event.current.Equals(Event.KeyboardEvent ("space")) ||
+					buttonClicked
 				)
 			{
 				switch (this.selectedButtonIndex)
