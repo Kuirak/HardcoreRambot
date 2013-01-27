@@ -59,7 +59,6 @@ public class StartMenuScreen : MonoBehaviour {
 		ctrl.CustomSkin = this.skin;
 		ctrl.StyleName = "StartMenuSubHeader";
 		labels.Add(ctrl);
-
 	}
 
 	void SetupPatrollingLabels() 

@@ -206,7 +206,12 @@ public class PauseMenuScreen : MonoBehaviour
 	{
 	    this.enabled = false;
 	    Reset();
-        if(!game)return;
+        
+		if (!game)
+		{
+        	return;
+		}
+		
 	    game.Resume();
 	}
 	
