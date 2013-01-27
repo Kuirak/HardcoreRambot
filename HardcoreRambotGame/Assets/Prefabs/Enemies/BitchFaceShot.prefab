@@ -274,9 +274,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 536fa68c901ca9745aa6f097c0b80174, type: 3}
   m_Name: 
-  Fuel: 10
-  MaxFuel: 10
-  BurnRate: 10
+  Fuel: 100
+  MaxFuel: 100
+  BurnRate: 5
   RefillRate: 8
   Offset: 10
   JetpackStrength: 40
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76865865d507e054f8ac4c43c75133c3, type: 3}
   m_Name: 
-  maxSpeed: 50
+  maxSpeed: 16
   turnSpeed: 2
   maxMoveAngle: 90
   maxDistanceToPlayer: 1

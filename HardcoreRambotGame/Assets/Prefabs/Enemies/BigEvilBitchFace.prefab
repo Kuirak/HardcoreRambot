@@ -463,7 +463,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0119590759, y: 1.08562779, z: .308947653}
+  m_LocalPosition: {x: -.0119590759, y: .751798272, z: .308947772}
   m_LocalScale: {x: 1.46751499, y: .653695524, z: 1.79904461}
   m_Children: []
   m_Father: {fileID: 400032}
@@ -474,7 +474,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
   m_LocalRotation: {x: 2.18556941e-08, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.333829492, z: 0}
   m_LocalScale: {x: .375359833, y: .375359833, z: .50330925}
   m_Children:
   - {fileID: 400026}
@@ -490,7 +490,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -88.8804398, z: 0}
+  m_LocalPosition: {x: -60.9615517, y: 26.6532669, z: 12.1331291}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 400028}
@@ -896,8 +896,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.71000004, z: 1}
+  m_Center: {x: 0, y: -.620000005, z: 0}
 --- !u!95 &9500000
 Animator:
   m_ObjectHideFlags: 1
@@ -933,8 +933,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76865865d507e054f8ac4c43c75133c3, type: 3}
   m_Name: 
-  maxSpeed: 20
-  turnSpeed: 1
+  maxSpeed: 15
+  turnSpeed: 5
   maxMoveAngle: 120
   maxDistanceToPlayer: 5
   selfdestruct: 1
@@ -970,7 +970,7 @@ CharacterController:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100032}
   serializedVersion: 2
-  m_Height: 2
+  m_Height: .75
   m_Radius: .5
   m_SlopeLimit: 45
   m_StepOffset: .300000012
