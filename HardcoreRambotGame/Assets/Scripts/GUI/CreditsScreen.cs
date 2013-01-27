@@ -24,17 +24,18 @@ public class CreditsScreen : MonoBehaviour {
 	void Start () 
 	{
 		Reset ();
-		enabledStartTime = 0;
 	}
 	
 	void Reset() 
 	{
 		controls = new List<AnimatedGUIControl>(16);
+		enabledStartTime = 0;
+		Time.timeScale = 1;
 	}
 	
 	void SetupControls() 
 	{
-		Debug.Log ("EndgameScreen::SetupControls");
+		Debug.Log ("CreditsScreen::SetupControls");
 		
 		HorizontalMovingLabel ctrl;
 
@@ -85,7 +86,7 @@ public class CreditsScreen : MonoBehaviour {
 		
 		currentDelay += nameDelay;
 		controlPosition += nextLineOffset;
-		ctrl = new HorizontalMovingLabel("Martin Mahony", 
+		ctrl = new HorizontalMovingLabel("Martin Hones", 
 										-lineSpeed, 
 										new Vector2(Screen.width, controlPosition), 
 										stopPosition, 
@@ -263,7 +264,6 @@ public class CreditsScreen : MonoBehaviour {
 			{
 				Application.LoadLevel("StartMenu");
 			}
-			
 			
 			DrawControls();
 		}
