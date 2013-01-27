@@ -11,6 +11,7 @@ public class MouseLock : MonoBehaviour
 	{
 	    Screen.lockCursor = true;
 	    Menu = GetComponent<PauseMenuScreen>();
+	    Time.timeScale = 1;
 	}
 
     public void Pause()
