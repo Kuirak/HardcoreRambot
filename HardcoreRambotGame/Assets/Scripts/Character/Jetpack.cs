@@ -56,6 +56,7 @@ public class Jetpack : MonoBehaviour
 	        IsFlying = true;
 	        Fuel -= BurnRate*Time.deltaTime;
 	        var moveDir = Vector3.up*JetpackStrength;
+            EndgameScreen.score += Random.Range(0, 2);
             moveDir += _controller.velocity.normalized;
 	        moveDir *= Time.deltaTime;
 	        _controller.Move(moveDir);

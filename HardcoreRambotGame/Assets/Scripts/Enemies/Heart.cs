@@ -32,6 +32,7 @@ public class Heart : MonoBehaviour {
         {
             //print("herzhafte Colision " + other.name);
             Player.instance.addHeartPower(heartPower);
+            EndgameScreen.hearts++;
 
             Destroyable d = GetComponent<Destroyable>();
             if (d)

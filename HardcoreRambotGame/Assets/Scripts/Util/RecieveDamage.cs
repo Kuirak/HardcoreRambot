@@ -21,7 +21,9 @@ public class RecieveDamage : MonoBehaviour
         if(!bullet)return;
         _destroyable.receiveDamage(bullet.damage);
         bullet.GetComponent<Destroyable>().receiveDamage(KILL_BULLET);
-
+        if (_destroyable.health <= 0)
+            EndgameScreen.kills++;
+        EndgameScreen.score += Random.Range(0, 10);
 	}
 
 

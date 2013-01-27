@@ -27,7 +27,7 @@ public class Destroyable : MonoBehaviour {
 
     public void receiveDamage(float damage)
     {
-        
+        EndgameScreen.score += Random.Range(0, (int)damage);
         health -= damage;
 
         if (health <= 0)

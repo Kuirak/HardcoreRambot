@@ -2,7 +2,11 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class EndgameScreen : MonoBehaviour {
-	
+
+    public static int kills = 0;
+    public static int hearts = 0;
+    public static int score = 0;
+
 	protected GameObject player = null;
 	public GUISkin skin;
 	
@@ -143,7 +147,7 @@ public class EndgameScreen : MonoBehaviour {
 		
 		controlPosition = initialStatsOffset;
 		delay += nextStatsLineDelay;
-		ctrl = new HeartbeatLabel("[time]", 
+		ctrl = new HeartbeatLabel(Time.timeSinceLevelLoad+" s", 
 									new Vector2(Screen.width / 2, controlPosition), 
 									this.statsValueBeatDuration, 
 									this.statValueBeatCount, 
@@ -160,7 +164,7 @@ public class EndgameScreen : MonoBehaviour {
 		
 		controlPosition += nextStatsLineOffset;
 		delay += nextStatsLineDelay;
-		ctrl = new HeartbeatLabel("[killcount]",
+		ctrl = new HeartbeatLabel(kills+"",
 									new Vector2(Screen.width / 2, controlPosition), 
 									this.statsValueBeatDuration, 
 									this.statValueBeatCount, 
@@ -177,7 +181,7 @@ public class EndgameScreen : MonoBehaviour {
 		
 		controlPosition += nextStatsLineOffset;
 		delay += nextStatsLineDelay;
-		ctrl = new HeartbeatLabel("[heartcount]", 
+		ctrl = new HeartbeatLabel(hearts+"", 
 									new Vector2(Screen.width / 2, controlPosition), 
 									this.statsValueBeatDuration, 
 									this.statValueBeatCount, 
@@ -191,10 +195,12 @@ public class EndgameScreen : MonoBehaviour {
 		//
 		//
 		//
+
+        EndgameScreen.score += Random.Range(0, 1000);
 		
 		controlPosition += nextStatsLineOffset;
 		delay += nextStatsLineDelay;
-		ctrl = new HeartbeatLabel("[score]", 
+		ctrl = new HeartbeatLabel(score+"", 
 									new Vector2(Screen.width / 2, controlPosition), 
 									this.statsValueBeatDuration, 
 									this.statValueBeatCount, 
