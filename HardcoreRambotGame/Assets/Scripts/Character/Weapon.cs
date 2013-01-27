@@ -7,13 +7,14 @@ public class Weapon : MonoBehaviour {
     public float[] shootsPerMinute;
     public GameObject[] visibleWeapon;
     public float JitterStrength = 0.01f;
-	public GameObject muzzleFlash;
+	
 
     float lastShotTime = 0;
-
+    public ParticleSystem Particle;
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+	    Particle =GetComponent<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
@@ -33,7 +34,8 @@ public class Weapon : MonoBehaviour {
             lastShotTime = Time.time;
             Quaternion r = Quaternion.Lerp(transform.rotation, Random.rotation, JitterStrength);
             Instantiate(bullet[lvl - 1], transform.position, r );
-            Instantiate(muzzleFlash, transform.position, r);
+            Particle.Play();
+           
         }
 	}
 }

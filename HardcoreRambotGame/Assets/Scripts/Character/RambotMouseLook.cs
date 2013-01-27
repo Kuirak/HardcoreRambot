@@ -7,8 +7,9 @@ public class RambotMouseLook : MonoBehaviour
     public Transform RotA;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+	    
 	}
 	
 	// Update is called once per frame

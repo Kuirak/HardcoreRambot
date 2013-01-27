@@ -17,7 +17,16 @@ public class MouseLock : MonoBehaviour
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Escape))
 	    {
-            ShowMenu = !ShowMenu;
+            if(ShowMenu)
+            {
+                ShowMenu = false;
+                Time.timeScale = 1;
+            }
+            else
+            {
+                ShowMenu = true;
+                Time.timeScale = 0;
+            }
 	        
 	    }
 	    if(ShowMenu)
@@ -37,8 +46,15 @@ public class MouseLock : MonoBehaviour
 
     void OnApplicationFocus(bool focus)
     {
-        if (!focus) return;
-        Screen.lockCursor = false;
-        ShowMenu = true;
+        if (focus)
+        {
+            Screen.lockCursor = false;
+            ShowMenu = true;
+        }
+        else
+        {
+            Screen.lockCursor = true;
+
+        }
     }
 }

@@ -19,7 +19,7 @@ public class RambotCharacterController : MonoBehaviour
 	{
 	    _controller = GetComponent<CharacterController>();
 	    _jetpack = GetComponent<Jetpack>();
-	    Screen.lockCursor = true;
+	    
 	}
 	
 	// Update is called once per frame
