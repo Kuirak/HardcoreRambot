@@ -42,6 +42,7 @@ public class EndgameScreen : MonoBehaviour {
 	public float statsValueBeatDuration = 0.25f;
 
 	protected bool statsSetupDone = false;
+	protected float enabledStartTime;
 	
 	const HorizontalMovingLabel.BorderAlignment leftColumnAlignment = HorizontalMovingLabel.BorderAlignment.RIGHT;
 	
@@ -57,6 +58,7 @@ public class EndgameScreen : MonoBehaviour {
 		statsValues = new List<AnimatedGUIControl>(16);
 		
 		statsSetupDone = false;
+		enabledStartTime = Time.time;
 	}
 	
 	void SetupStatCaptions() 
@@ -260,6 +262,7 @@ public class EndgameScreen : MonoBehaviour {
 	
 		if (!statsSetupDone)
 		{
+			enabledStartTime = Time.time;
 			player = GameObject.FindWithTag("Player");
 			SetupStatCaptions();
 			SetupStatValues();
@@ -272,7 +275,8 @@ public class EndgameScreen : MonoBehaviour {
 			
 			GUI.Box (new Rect(0,0,Screen.width,Screen.height), "");
 			
-			if (Event.current.isKey || Event.current.isMouse)
+			// Allow aborting the EndgameScreen after 3 seconds
+			if ((Event.current.isKey || Event.current.isMouse) && enabledStartTime > 0 && Time.time > enabledStartTime + 2f) 
 			{
 				Application.LoadLevel("StartMenu");
 			}
