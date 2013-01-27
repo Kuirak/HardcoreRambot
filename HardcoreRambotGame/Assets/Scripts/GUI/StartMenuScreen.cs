@@ -33,6 +33,7 @@ public class StartMenuScreen : MonoBehaviour {
 		patrollingLabels = new List<HorizontalPatrollingLabel>(16);
 		menuButtons = new List<MenuButton>(16);
 		boeppelButton = null;
+		selectedButtonIndex = 0;
 	}
 	
 	void SetupLabels() 
@@ -130,8 +131,7 @@ public class StartMenuScreen : MonoBehaviour {
 		this.menuButtons.Add(ctrl);
 		
 		// Initial selection
-		selectedButtonIndex = 0;
-		this.menuButtons[selectedButtonIndex].Highlighted = true;		
+		UpdateSelectedIndex(-selectedButtonIndex); // set to zero
 
 		// BoeppelButton
 		boeppelButton = new MenuButton("f", buttonArea);
@@ -182,8 +182,8 @@ public class StartMenuScreen : MonoBehaviour {
 
 	protected void UpdateSelectedIndex(int offset)
 	{
-        if (audio)
-            audio.Play();
+		int previousIndex = this.selectedButtonIndex;
+		
 		menuButtons[this.selectedButtonIndex].Highlighted = false;
 		
 		this.selectedButtonIndex += offset;
@@ -195,6 +195,14 @@ public class StartMenuScreen : MonoBehaviour {
 			this.selectedButtonIndex = menuButtons.Count - 1;
 
 		menuButtons[this.selectedButtonIndex].Highlighted = true;
+		
+		if (previousIndex != this.selectedButtonIndex)
+		{
+	        if (audio)
+			{
+	            audio.Play();
+			}
+		}
 	}
 	
 	protected void LetsRoll()
