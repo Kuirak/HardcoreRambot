@@ -9569,6 +9569,7 @@ GameObject:
   - 114: {fileID: 380662010}
   - 114: {fileID: 380662009}
   - 82: {fileID: 380662008}
+  - 45: {fileID: 380662014}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9597,7 +9598,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -9615,7 +9616,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_HDR: 0
+  m_HDR: 1
 --- !u!82 &380662008
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9625,11 +9626,11 @@ AudioSource:
   m_GameObject: {fileID: 380662005}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: f27da02717ae07a448b800e7051b0d64, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e1f57cd407ebdf447bcf410d7d108e8d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -9723,6 +9724,14 @@ Behaviour:
   m_PrefabInternal: {fileID: 991336347}
   m_GameObject: {fileID: 380662005}
   m_Enabled: 1
+--- !u!45 &380662014
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 380662005}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
 --- !u!1001 &380821391
 Prefab:
   m_ObjectHideFlags: 0
@@ -20029,14 +20038,14 @@ Prefab:
     - target: {fileID: 8200000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f27da02717ae07a448b800e7051b0d64, type: 3}
+      objectReference: {fileID: 8300000, guid: e1f57cd407ebdf447bcf410d7d108e8d, type: 3}
     - target: {fileID: 8200000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
       propertyPath: Loop
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: 50254b60b0e1957499908ef513db1372, type: 2}
       propertyPath: levelUpHearts.Array.data[0]
@@ -20105,6 +20114,38 @@ Prefab:
     - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
       propertyPath: shootsPerMinute.Array.data[14]
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_BackGroundColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: field of view
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
