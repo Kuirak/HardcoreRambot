@@ -262,7 +262,7 @@ public class CreditsScreen : MonoBehaviour {
 			
 			GUI.Box (new Rect(0,0,Screen.width,Screen.height), "");
 //		GUI.Box(new Rect(Screen.width/2-5, 0, 10, Screen.height), "");
-			if (Event.current.Equals (Event.KeyboardEvent ("[esc]")))
+			if (Event.current.Equals (Event.KeyboardEvent ("escape")))
 			{
 				Application.LoadLevel("StartMenu");
 			}
