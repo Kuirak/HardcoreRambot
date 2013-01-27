@@ -254,6 +254,7 @@ public class PauseMenuScreen : MonoBehaviour {
 				}
 			}
 			
+			GUI.Box (new Rect(0, 0, Screen.width, Screen.height), "");
 			DrawControls();
 		}
 		finally
