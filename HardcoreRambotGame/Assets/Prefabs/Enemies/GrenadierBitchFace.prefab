@@ -174,12 +174,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76865865d507e054f8ac4c43c75133c3, type: 3}
   m_Name: 
-  maxSpeed: 100
+  maxSpeed: 925
   turnSpeed: 1
   maxMoveAngle: 50
   maxDistanceToPlayer: 1
   selfdestruct: 1
-  selfdestructDamage: 5
+  selfdestructDamage: 10
   jetpackpower: 100
   gravity: 10
   maxfall: 10
