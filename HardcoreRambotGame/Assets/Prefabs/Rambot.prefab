@@ -4080,9 +4080,7 @@ MonoBehaviour:
   - 100
   - 150
   - 200
-  - 300
   - 500
-  - 1000
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4128,8 +4126,6 @@ MonoBehaviour:
   - {fileID: 400000, guid: 110d7022c69426344817ef5731096fa4, type: 2}
   - {fileID: 400000, guid: 818a91430972a1442b1eb1658e7d93a2, type: 2}
   - {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
-  - {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
-  - {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
   shootsPerMinute:
   - 5
   - 8
@@ -4139,8 +4135,6 @@ MonoBehaviour:
   - 21
   - 28
   - 33
-  - 40
-  - 50
   visibleWeapon:
   - {fileID: 100020}
   - {fileID: 100162}
@@ -4149,8 +4143,6 @@ MonoBehaviour:
   - {fileID: 100114}
   - {fileID: 100096}
   - {fileID: 100078}
-  - {fileID: 100058}
-  - {fileID: 100058}
   - {fileID: 100058}
   JitterStrength: .00999999978
   Particle: {fileID: 0}
