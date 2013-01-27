@@ -286,6 +286,7 @@ MonoBehaviour:
   EmissionAfterBurn: 150
   activationDist: 4
   randomActivationDist: 20
+  forwardBoost: 10
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,7 +310,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76865865d507e054f8ac4c43c75133c3, type: 3}
   m_Name: 
-  maxSpeed: 100
+  maxSpeed: 50
   turnSpeed: 2
   maxMoveAngle: 90
   maxDistanceToPlayer: 1
@@ -318,6 +319,7 @@ MonoBehaviour:
   jetpackpower: 100
   gravity: 10
   maxfall: 10
+  jpVec: {x: 0, y: 0, z: 0}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
