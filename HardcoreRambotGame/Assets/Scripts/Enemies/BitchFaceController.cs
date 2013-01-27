@@ -28,6 +28,8 @@ public class BitchFaceController : MonoBehaviour {
 	
 	void Update () 
     {
+        if (!player)
+            return;
         Vector3 targetPosProj = player.transform.position;
         targetPosProj.y = transform.position.y;
         float distToPlayerProj = (targetPosProj - transform.position).magnitude;
