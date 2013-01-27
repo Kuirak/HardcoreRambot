@@ -58,11 +58,11 @@ public class RambotCharacterController : MonoBehaviour
         var horizontalValue = Input.GetAxis("Horizontal");
         if (horizontalValue > 0)
         {
-            Anim.CrossFade("walk_left");
+            Anim.CrossFade("walk_right");
         }
         else if (horizontalValue < 0)
         {
-            Anim.CrossFade("walk_right");
+            Anim.CrossFade("walk_left");
         }
         
         

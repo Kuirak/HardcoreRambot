@@ -4340,11 +4340,11 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: f27da02717ae07a448b800e7051b0d64, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .57099998
+  m_Volume: .375
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
-  Priority: 128
+  Priority: 86
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4725,7 +4725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82de064ca9d874439c5da7fe1eb249e, type: 3}
   m_Name: 
   shader: {fileID: 4800000, guid: a26444c2dfb9f474cb23857d2d79af5f, type: 3}
-  color: {r: 1, g: 0, b: 0, a: 0}
+  color: {r: .701492548, g: 0, b: 0, a: 0}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
