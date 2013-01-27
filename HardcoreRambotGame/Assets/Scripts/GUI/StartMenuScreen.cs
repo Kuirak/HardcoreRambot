@@ -193,6 +193,7 @@ public class StartMenuScreen : MonoBehaviour {
 	protected void ShowCredits()
 	{
 		Debug.Log("Credits");
+		Application.LoadLevel("Credits");
 	}
 	
 	public void OnGUI()
