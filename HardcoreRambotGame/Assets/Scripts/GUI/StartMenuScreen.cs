@@ -16,6 +16,8 @@ public class StartMenuScreen : MonoBehaviour {
 	const int MENU_INDEX_LETSROLL = 0;
 	const int MENU_INDEX_CREDITS = 1;
 	
+	protected bool buttonClicked = false;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -148,9 +150,20 @@ public class StartMenuScreen : MonoBehaviour {
 			ctrl.Tick();
 		}
 
-		foreach (MenuButton ctrl in menuButtons)
+		for (int i = 0; i < menuButtons.Count; i++)
 		{
+			MenuButton ctrl = menuButtons[i];
 			ctrl.Tick();
+			
+			if (ctrl.MouseHover)
+			{
+				UpdateSelectedIndex(i - selectedButtonIndex);
+			}
+			
+			if (ctrl.Clicked)
+			{
+				buttonClicked = true;
+			}
 		}
 		
 		Rect buttonArea = this.menuButtons[selectedButtonIndex].ButtonArea;
