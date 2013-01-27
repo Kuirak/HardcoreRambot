@@ -474,7 +474,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
   m_LocalRotation: {x: 2.18556941e-08, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: .000789083948, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .375359833, y: .375359833, z: .50330925}
   m_Children:
   - {fileID: 400026}
@@ -490,7 +490,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.08051205, y: -88.8804398, z: .17239809}
+  m_LocalPosition: {x: 0, y: -88.8804398, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 400028}
@@ -939,6 +939,9 @@ MonoBehaviour:
   maxDistanceToPlayer: 5
   selfdestruct: 1
   selfdestructDamage: 10
+  jetpackpower: 100
+  gravity: 10
+  maxfall: 10
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

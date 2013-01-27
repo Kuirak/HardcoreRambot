@@ -376,7 +376,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.08051205, y: 2.40584803, z: .17239809}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400040}
@@ -1095,6 +1095,8 @@ MonoBehaviour:
   ParticleStartSpeedDivider: 10
   MaxEmissionRate: 150
   EmissionAfterBurn: 150
+  activationDist: 4
+  randomActivationDist: 20
 --- !u!143 &14300000
 CharacterController:
   m_ObjectHideFlags: 1
