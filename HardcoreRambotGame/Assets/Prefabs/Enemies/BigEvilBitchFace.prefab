@@ -934,7 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76865865d507e054f8ac4c43c75133c3, type: 3}
   m_Name: 
   maxSpeed: 15
-  turnSpeed: 5
+  turnSpeed: 6
   maxMoveAngle: 120
   maxDistanceToPlayer: 5
   selfdestruct: 1
