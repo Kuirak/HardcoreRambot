@@ -18,9 +18,14 @@ public class SplashScreen : MonoBehaviour {
         // Draw our texture on screen - full screen
         GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), splashImage, ScaleMode.StretchToFill, false, 0);
 
-        // Call coroutine to hold splash screen up for a given amount of time
+		// Call coroutine to hold splash screen up for a given amount of time
         StartCoroutine (SplashHold());
-    }
+
+		if (Event.current.type == EventType.keyDown)
+		{
+			Application.LoadLevel("StartMenu");
+		}
+	}
 
     IEnumerator SplashHold()
     {
