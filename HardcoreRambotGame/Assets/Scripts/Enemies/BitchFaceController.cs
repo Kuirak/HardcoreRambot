@@ -18,6 +18,8 @@ public class BitchFaceController : MonoBehaviour {
     public float gravity = 10;
     public float maxfall = 10;
 
+    public Vector3 jpVec;
+
 	void Start () {
         controller = GetComponent<CharacterController>();
 
@@ -30,7 +32,7 @@ public class BitchFaceController : MonoBehaviour {
         targetPosProj.y = transform.position.y;
         float distToPlayerProj = (targetPosProj - transform.position).magnitude;
         Quaternion targetRot = Quaternion.LookRotation(targetPosProj - transform.position);
-        Quaternion rot = Quaternion.Slerp(transform.rotation, targetRot, turnSpeed * Time.deltaTime);
+        Quaternion rot = Quaternion.Slerp(transform.rotation, targetRot, Mathf.Clamp(turnSpeed * Time.deltaTime,0,1));
         transform.rotation = rot;
         float angleToTarget = Quaternion.Angle(transform.rotation, targetRot);
         
@@ -47,8 +49,22 @@ public class BitchFaceController : MonoBehaviour {
         jpspeed -= gravity;
         jpspeed = 0;// Mathf.Clamp(jpspeed, -maxfall, maxfall);*/
 
-        float curSpeed = maxSpeed * Mathf.Clamp((90 - angleToTarget) / 90, 0, 1) * Mathf.Clamp((distToPlayerProj-maxDistanceToPlayer) / maxDistanceToPlayer, 0, 1);
-        controller.SimpleMove(forward * curSpeed * Time.deltaTime);
+
+
+        float curSpeed = maxSpeed * Mathf.Clamp((maxMoveAngle - angleToTarget) / maxMoveAngle, 0, 1) /* * Mathf.Clamp((distToPlayerProj-maxDistanceToPlayer) / maxDistanceToPlayer, 0, 1)*/;
+        //controller.SimpleMove(forward * curSpeed * Time.deltaTime);
+
+        Vector3 m = Vector3.zero;
+        m += forward * curSpeed * Time.deltaTime + jpVec;
+
+
+        //if (jpVec == Vector3.zero)
+        {
+            m += Physics.gravity * 1.05f * Time.deltaTime;
+        }
+        
+        controller.Move(m);
+        
 
 
 
