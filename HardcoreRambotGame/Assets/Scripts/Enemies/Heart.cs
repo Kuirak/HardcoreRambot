@@ -19,13 +19,19 @@ public class Heart : MonoBehaviour {
     //void OnCollisionEnter(Collision collisionInfo)
     {
         //Collider other = collisionInfo.collider;
-        Transform parent = other.transform.parent;
-        if (!parent)
-            return;
 
-        Affiliation player = parent.GetComponent<Affiliation>();
+        Affiliation player = other.GetComponent<Affiliation>();
+
         if (!player)
-            return;
+        {
+            Transform parent = other.transform.parent;
+            if (!parent)
+                return;
+
+            player = parent.GetComponent<Affiliation>();
+            if (!player)
+                return;
+        }
 
 
         if (player.GetType() == typeof(Player))

@@ -46,6 +46,9 @@ public class EnemyJetpack : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+        if (!player)
+            return;
+
         bc.jpVec = Vector3.zero;
 
         float playerAbove = player.transform.position.y - transform.position.y;
