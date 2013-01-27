@@ -6,6 +6,8 @@ public class MenuButton : SkinnedGUIControl {
 	public string Text { get; set; }
 	public bool Highlighted { get; set; }
 	public string HighlightedStyleName { get; set; }
+	public bool Clicked { get; set; }
+	public bool MouseHover { get { return IsMouseHover(); } }
 	
 	public Rect ButtonArea { get; set; }
 	
@@ -16,6 +18,7 @@ public class MenuButton : SkinnedGUIControl {
 		this.ButtonArea = buttonArea;
 		
 		this.HighlightedStyleName = "label";
+		this.Clicked = false;
 	}
 	
 	public void Draw()
@@ -23,13 +26,30 @@ public class MenuButton : SkinnedGUIControl {
 		if (this.Highlighted)
 		{
 			GUIStyle style = GUIUtils.FindStyleOrDefault(this.HighlightedStyleName, GUI.skin.label);
-			GUI.Box(this.ButtonArea, this.Text, style);
+			this.Clicked = GUI.Button(this.ButtonArea, this.Text, style);
 		}
 		else
 		{
-			GUI.Box(this.ButtonArea, this.Text, GetStyle());
+			this.Clicked = GUI.Button(this.ButtonArea, this.Text, GetStyle());
 		}
 	}
+	
+    /// <summary>
+    /// Checks if a mouse click happened inside this control
+    /// be hidden.
+    /// </summary>
+    protected bool IsMouseHover()
+    {
+        // Only react to mouse up events
+        UnityEngine.Event e = UnityEngine.Event.current;
+		
+        if (this.ButtonArea.Contains(e.mousePosition))
+        {
+            return true;
+		}
+
+		return false;
+    }
 	
 	public override void Tick()
 	{		

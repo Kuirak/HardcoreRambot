@@ -19,6 +19,8 @@ public class PauseMenuScreen : MonoBehaviour
 	const int MENU_INDEX_RESTART = 1;
 	const int MENU_INDEX_EXIT = 2;
 	
+	protected bool buttonClicked = false;
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -163,9 +165,20 @@ public class PauseMenuScreen : MonoBehaviour
 			ctrl.Tick();
 		}
 
-		foreach (MenuButton ctrl in menuButtons)
+		for (int i = 0; i < menuButtons.Count; i++)
 		{
+			MenuButton ctrl = menuButtons[i];
 			ctrl.Tick();
+			
+			if (ctrl.MouseHover)
+			{
+				UpdateSelectedIndex(i - selectedButtonIndex);
+			}
+			
+			if (ctrl.Clicked)
+			{
+				buttonClicked = true;
+			}
 		}
 		
 		Rect buttonArea = this.menuButtons[selectedButtonIndex].ButtonArea;
@@ -193,7 +206,12 @@ public class PauseMenuScreen : MonoBehaviour
 	{
 	    this.enabled = false;
 	    Reset();
-        if(!game)return;
+        
+		if (!game)
+		{
+        	return;
+		}
+		
 	    game.Resume();
 	}
 	
@@ -246,7 +264,8 @@ public class PauseMenuScreen : MonoBehaviour
     		
 			else if (
 					Event.current.Equals(Event.KeyboardEvent ("return")) ||
-				 	Event.current.Equals(Event.KeyboardEvent ("space"))
+				 	Event.current.Equals(Event.KeyboardEvent ("space")) ||
+					buttonClicked
 				)
 			{
 				switch (this.selectedButtonIndex)

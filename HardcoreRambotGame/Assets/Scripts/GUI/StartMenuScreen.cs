@@ -16,6 +16,8 @@ public class StartMenuScreen : MonoBehaviour {
 	const int MENU_INDEX_LETSROLL = 0;
 	const int MENU_INDEX_CREDITS = 1;
 	
+	protected bool buttonClicked = false;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -57,7 +59,6 @@ public class StartMenuScreen : MonoBehaviour {
 		ctrl.CustomSkin = this.skin;
 		ctrl.StyleName = "StartMenuSubHeader";
 		labels.Add(ctrl);
-
 	}
 
 	void SetupPatrollingLabels() 
@@ -148,9 +149,20 @@ public class StartMenuScreen : MonoBehaviour {
 			ctrl.Tick();
 		}
 
-		foreach (MenuButton ctrl in menuButtons)
+		for (int i = 0; i < menuButtons.Count; i++)
 		{
+			MenuButton ctrl = menuButtons[i];
 			ctrl.Tick();
+			
+			if (ctrl.MouseHover)
+			{
+				UpdateSelectedIndex(i - selectedButtonIndex);
+			}
+			
+			if (ctrl.Clicked)
+			{
+				buttonClicked = true;
+			}
 		}
 		
 		Rect buttonArea = this.menuButtons[selectedButtonIndex].ButtonArea;
@@ -218,7 +230,8 @@ public class StartMenuScreen : MonoBehaviour {
 			}
 			else if (
 					Event.current.Equals(Event.KeyboardEvent ("return")) ||
-				 	Event.current.Equals(Event.KeyboardEvent ("space"))
+				 	Event.current.Equals(Event.KeyboardEvent ("space")) ||
+					buttonClicked
 				)
 			{
 				switch (this.selectedButtonIndex)
