@@ -18,10 +18,13 @@ public class StartMenuScreen : MonoBehaviour {
 	
 	protected bool buttonClicked = false;
 	
+	Texture helpImage;
+	
 	// Use this for initialization
 	void Start () 
 	{
 		Reset ();
+		helpImage = (Texture)Resources.Load("anleitung2");
 	}
 	
 	void Reset() 
@@ -171,6 +174,12 @@ public class StartMenuScreen : MonoBehaviour {
 		this.boeppelButton.Tick();
 	}
 	
+	protected void DrawHelp()
+	{
+		const float size = 96;
+        GUI.DrawTexture(new Rect(4, Screen.height - size - 4, size, size), helpImage, ScaleMode.ScaleToFit, false, 0);
+	}
+
 	protected void UpdateSelectedIndex(int offset)
 	{
 		menuButtons[this.selectedButtonIndex].Highlighted = false;
@@ -248,6 +257,7 @@ public class StartMenuScreen : MonoBehaviour {
 			}
 			
 			DrawControls();
+			DrawHelp();
 		}
 		finally
 		{
