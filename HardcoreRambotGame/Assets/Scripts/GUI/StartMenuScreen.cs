@@ -34,6 +34,7 @@ public class StartMenuScreen : MonoBehaviour {
 		menuButtons = new List<MenuButton>(16);
 		boeppelButton = null;
 		selectedButtonIndex = 0;
+		Time.timeScale = 1;
 	}
 	
 	void SetupLabels() 
