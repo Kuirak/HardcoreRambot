@@ -18,16 +18,22 @@ public class EnemyJetpack : MonoBehaviour
     public float activationDist = 4;
     public float randomActivationDist = 20;
 
+    public float forwardBoost = 10;
+
     float activationDistAdd = 0;
     float jppow = 1;
 
     Player player;
+
+    bool jump = false;
+    BitchFaceController bc;
 
     private CharacterController _controller;
     private ParticleSystem[] _jetpackstreams;
 	// Use this for initialization
 	void Start ()
 	{
+        bc = GetComponent<BitchFaceController>();
 	    _controller = GetComponent<CharacterController>();
 	    var jetpack = transform.Find("Body").FindChild("Jetpack");
 	    _jetpackstreams = jetpack.GetComponentsInChildren<ParticleSystem>();
@@ -40,8 +46,14 @@ public class EnemyJetpack : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+        bc.jpVec = Vector3.zero;
+
         float playerAbove = player.transform.position.y - transform.position.y;
-        bool jump = (playerAbove > activationDist + activationDistAdd);
+        
+        if (!jump)
+            jump = (playerAbove > activationDist + activationDistAdd);
+        else
+            jump = (playerAbove > -activationDist);
        
         if (Fuel + RefillRate * Time.deltaTime < MaxFuel && !jump)
         {
@@ -70,8 +82,12 @@ public class EnemyJetpack : MonoBehaviour
 	        Fuel -= BurnRate*Time.deltaTime;
             var moveDir = Vector3.up * JetpackStrength * jppow;
             moveDir += _controller.velocity.normalized;
+
+            //moveDir += transform.forward * forwardBoost;
+
 	        moveDir *= Time.deltaTime;
-	        _controller.Move(moveDir);
+            bc.jpVec = moveDir;
+	        //_controller.Move(moveDir);
 	        foreach (var jetpackstream in _jetpackstreams)
 	        {
 	            jetpackstream.emissionRate = MaxEmissionRate;
