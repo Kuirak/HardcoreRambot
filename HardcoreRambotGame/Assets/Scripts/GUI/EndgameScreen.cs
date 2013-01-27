@@ -58,7 +58,7 @@ public class EndgameScreen : MonoBehaviour {
 		statsValues = new List<AnimatedGUIControl>(16);
 		
 		statsSetupDone = false;
-		enabledStartTime = Time.time;
+		enabledStartTime = 0;
 	}
 	
 	void SetupStatCaptions() 

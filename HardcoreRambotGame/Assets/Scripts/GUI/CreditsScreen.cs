@@ -18,11 +18,13 @@ public class CreditsScreen : MonoBehaviour {
 	public float lineSpeed = 100;
 	
 	const HorizontalMovingLabel.BorderAlignment leftColumnAlignment = HorizontalMovingLabel.BorderAlignment.RIGHT;
+	protected float enabledStartTime;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		Reset ();
+		enabledStartTime = 0;
 	}
 	
 	void Reset() 
@@ -244,6 +246,7 @@ public class CreditsScreen : MonoBehaviour {
 	
 		if (controls.Count == 0)
 		{
+			enabledStartTime = Time.time;
 			SetupControls();
 		}
 	
@@ -255,10 +258,12 @@ public class CreditsScreen : MonoBehaviour {
 			
 			GUI.Box (new Rect(0,0,Screen.width,Screen.height), "");
 
-			if (Event.current.isKey || Event.current.isMouse)
+			// Allow aborting the EndgameScreen after 3 seconds
+			if ((Event.current.isKey || Event.current.isMouse) && enabledStartTime > 0 && Time.time > enabledStartTime + 1f) 
 			{
 				Application.LoadLevel("StartMenu");
 			}
+			
 			
 			DrawControls();
 		}
