@@ -11,6 +11,8 @@ public class RambotCharacterController : MonoBehaviour
     public float JumpStrength = 1;
     public Transform Body;
     public float GravityStrength=0.1f;
+
+    public Animation Anim;
     private CharacterController _controller;
     private Jetpack _jetpack;
 
@@ -42,6 +44,10 @@ public class RambotCharacterController : MonoBehaviour
         }
 	    moveDir += Speed;
 	    moveDir *= Time.deltaTime;
+        if(moveDir.normalized.x == 0 && moveDir.normalized.z ==0)
+        {
+            Anim.CrossFade("Idle");
+        }
 	    _controller.Move(moveDir);
 	    
 	}
@@ -50,12 +56,31 @@ public class RambotCharacterController : MonoBehaviour
     private Vector3 Strafe()
     {
         var horizontalValue = Input.GetAxis("Horizontal");
+        if (horizontalValue > 0)
+        {
+            Anim.CrossFade("walk_left");
+        }
+        else if (horizontalValue < 0)
+        {
+            Anim.CrossFade("walk_right");
+        }
+        
+        
         return Body.right * horizontalValue * StrafeSpeed;
     }
 
     private Vector3 Forward()
     {
         var verticalValue = Input.GetAxis("Vertical");
+        if (verticalValue > 0)
+        {
+            Anim.CrossFade("walk_forward");
+        }
+        else if (verticalValue < 0)
+        {
+            Anim.CrossFade("walk_backward");
+        }
+        
         return Body.forward * verticalValue * ForwardSpeed;
     }
 

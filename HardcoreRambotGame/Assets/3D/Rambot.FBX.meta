@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: b9b6e668cdd7e6b408fa09fc654a5e49
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Body
+    100002: Body 1
+    100004: CATRigLArm1
+    100006: CATRigLArm2
+    100008: CATRigLArmCollarbone
+    100010: CATRigLArmHand
+    100012: CATRigWirbel_1
+    100014: CATRigWirbel_2
+    100016: CATRigWirbel_3
+    100018: CATRigWirbel_4
+    100020: Finger_3
+    100022: Oberarm_L
+    100024: Oberarm_R
+    100026: //RootNode
+    100028: Unterarm
+    100030: Wirbel_1
+    100032: Wirbel_2
+    100034: Wirbel_3
+    100036: Wirbel_4
+    400000: Body
+    400002: Body 1
+    400004: CATRigLArm1
+    400006: CATRigLArm2
+    400008: CATRigLArmCollarbone
+    400010: CATRigLArmHand
+    400012: CATRigWirbel_1
+    400014: CATRigWirbel_2
+    400016: CATRigWirbel_3
+    400018: CATRigWirbel_4
+    400020: Finger_3
+    400022: Oberarm_L
+    400024: Oberarm_R
+    400026: //RootNode
+    400028: Unterarm
+    400030: Wirbel_1
+    400032: Wirbel_2
+    400034: Wirbel_3
+    400036: Wirbel_4
+    4300000: Body
+    4300002: Oberarm_L
+    4300004: Unterarm
+    4300006: Finger_3
+    4300008: Oberarm_R
+    4300010: Wirbel_1
+    4300012: Wirbel_2
+    4300014: Wirbel_3
+    4300016: Wirbel_4
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Body
+    13700002: Finger_3
+    13700004: Oberarm_L
+    13700006: Oberarm_R
+    13700008: Unterarm
+    13700010: Wirbel_1
+    13700012: Wirbel_2
+    13700014: Wirbel_3
+    13700016: Wirbel_4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 
