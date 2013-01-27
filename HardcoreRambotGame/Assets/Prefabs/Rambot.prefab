@@ -4154,7 +4154,7 @@ MonoBehaviour:
   - {fileID: 100078}
   - {fileID: 100058}
   JitterStrength: .00999999978
-  muzzleFlash: {fileID: 100000, guid: 16fcb28e736ced54a9a0050fa5afab5c, type: 2}
+  Particle: {fileID: 0}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
