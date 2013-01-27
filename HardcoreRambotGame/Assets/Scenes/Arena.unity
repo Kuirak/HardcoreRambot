@@ -7303,8 +7303,8 @@ AudioSource:
   m_GameObject: {fileID: 380662005}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: e1f57cd407ebdf447bcf410d7d108e8d, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: f27da02717ae07a448b800e7051b0d64, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -17407,6 +17407,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: bullet.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: shootsPerMinute.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 50254b60b0e1957499908ef513db1372, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3.26225519
@@ -17454,6 +17462,90 @@ Prefab:
     - target: {fileID: 11400006, guid: 50254b60b0e1957499908ef513db1372, type: 2}
       propertyPath: JetpackStrength
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: GravityStrength
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f27da02717ae07a448b800e7051b0d64, type: 3}
+    - target: {fileID: 8200000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: levelUpHearts.Array.data[0]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: levelUpHearts.Array.data[1]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: levelUpHearts.Array.data[2]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: levelUpHearts.Array.data[3]
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: ForwardSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: JumpStrength
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: StrafeSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: bullet.Array.data[10]
+      value: 
+      objectReference: {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: bullet.Array.data[11]
+      value: 
+      objectReference: {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: bullet.Array.data[12]
+      value: 
+      objectReference: {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: bullet.Array.data[13]
+      value: 
+      objectReference: {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: bullet.Array.data[14]
+      value: 
+      objectReference: {fileID: 400000, guid: 35988e97f87cae44494137f6c30b0360, type: 2}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: shootsPerMinute.Array.data[10]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: shootsPerMinute.Array.data[11]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: shootsPerMinute.Array.data[12]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: shootsPerMinute.Array.data[13]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 50254b60b0e1957499908ef513db1372, type: 2}
+      propertyPath: shootsPerMinute.Array.data[14]
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50254b60b0e1957499908ef513db1372, type: 2}
@@ -17681,10 +17773,10 @@ MonoBehaviour:
   heartPower: 0
   level: 1
   levelUpHearts:
-  - 5
-  - 10
+  - 8
   - 20
-  - 50
+  - 30
+  - 70
   - 100
   - 150
   - 200
@@ -17702,11 +17794,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 479be085aca2f1349a98780ca2e05415, type: 3}
   m_Name: 
-  ForwardSpeed: 20
-  StrafeSpeed: 20
-  JumpStrength: 20
+  ForwardSpeed: 15
+  StrafeSpeed: 15
+  JumpStrength: 5
   Body: {fileID: 371937542}
-  GravityStrength: .100000001
+  GravityStrength: .0500000007
 --- !u!143 &1053619917
 CharacterController:
   m_ObjectHideFlags: 0

@@ -314,7 +314,7 @@ MonoBehaviour:
   maxMoveAngle: 90
   maxDistanceToPlayer: .100000001
   selfdestruct: 1
-  selfdestructDamage: 0
+  selfdestructDamage: 5
   jetpackpower: 100
   gravity: 10
   maxfall: 10
