@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400002}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400004}
+  - 82: {fileID: 8200000}
   m_Layer: 0
   m_Name: BitchFaceDeath
   m_TagString: Untagged
@@ -236,6 +238,62 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.5, y: 1.5, z: 3.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -276,6 +334,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053216e6779461c448c8c2c8d1649dd8, type: 3}
   m_Name: 
   dieAfter: 10
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fbd9b83c258ce4b9c59fa4b03afc16, type: 3}
+  m_Name: 
+  AudioSources:
+  - {fileID: 8300000, guid: c1453b1c6bda8644bbf4b08886d226fc, type: 3}
+  - {fileID: 8300000, guid: 6cc39839a4f1d124d90ffc5a3772e4f0, type: 3}
+  - {fileID: 8300000, guid: 56a64f3a9065b8e468f7f8f13de22662, type: 3}
+  - {fileID: 8300000, guid: 4d44e71cd7090dd42a3af031ea73eeba, type: 3}
+  - {fileID: 8300000, guid: 6630403173e63d142806fd99e2ee8d63, type: 3}
+  - {fileID: 8300000, guid: fdef3a8a1c9690b49ae1a8a62540e3e4, type: 3}
+  - {fileID: 8300000, guid: 9cd5b6b6d4703f844a7704da77cfce0f, type: 3}
+  - {fileID: 8300000, guid: a6921bee43e231c48ae347745d7d404b, type: 3}
+  - {fileID: 8300000, guid: b31fb5fa5d2e6284f8a8afeb33cf8867, type: 3}
+  - {fileID: 8300000, guid: 81b0da7523f8a6444be53f20f49e9bc4, type: 3}
+  - {fileID: 8300000, guid: d51b8ad574c379f4ea3e01cce6df9d13, type: 3}
+  - {fileID: 8300000, guid: 6855b49c2221c744cb325b8641ee09d6, type: 3}
+  - {fileID: 8300000, guid: 5dbea481c5e7c204db85ce59602539c4, type: 3}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
