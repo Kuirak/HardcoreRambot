@@ -182,6 +182,8 @@ public class StartMenuScreen : MonoBehaviour {
 
 	protected void UpdateSelectedIndex(int offset)
 	{
+        if (audio)
+            audio.Play();
 		menuButtons[this.selectedButtonIndex].Highlighted = false;
 		
 		this.selectedButtonIndex += offset;

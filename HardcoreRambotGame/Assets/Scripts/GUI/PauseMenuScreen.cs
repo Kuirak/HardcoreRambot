@@ -189,6 +189,9 @@ public class PauseMenuScreen : MonoBehaviour
 	
 	protected void UpdateSelectedIndex(int offset)
 	{
+        if (audio)
+            audio.Play();
+
 		menuButtons[this.selectedButtonIndex].Highlighted = false;
 		
 		this.selectedButtonIndex += offset;
@@ -204,6 +207,8 @@ public class PauseMenuScreen : MonoBehaviour
 	
 	protected void Continue()
 	{
+        if (audio)
+            audio.Play();
 	    this.enabled = false;
 	    Reset();
         
@@ -217,11 +222,15 @@ public class PauseMenuScreen : MonoBehaviour
 	
 	protected void RestartLevel()
 	{
+        if (audio)
+            audio.Play();
 		Application.LoadLevel("Arena");
 	}
 	
 	protected void ExitToMainMenu()
 	{
+        if (audio)
+            audio.Play();
 		Application.LoadLevel("StartMenu");
 	}
 	
