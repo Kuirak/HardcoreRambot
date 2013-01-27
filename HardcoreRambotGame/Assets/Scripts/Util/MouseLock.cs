@@ -3,58 +3,58 @@ using System.Collections;
 
 public class MouseLock : MonoBehaviour
 {
+    public PauseMenuScreen Menu;
 
-
-    public bool ShowMenu;
+    
 	// Use this for initialization
 	void Start ()
 	{
 	    Screen.lockCursor = true;
-	    ShowMenu = false;
+	    Menu = GetComponent<PauseMenuScreen>();
 	}
-	
+
+    public void Pause()
+    {
+        print("paused");
+        Menu.enabled = true;
+        Screen.lockCursor = false;
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        print("resume");
+        Time.timeScale = 1;
+        Screen.lockCursor = true;
+    }
+
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Escape))
-	    {
-            if(ShowMenu)
+        {
+            if (!Menu.enabled)
             {
-                ShowMenu = false;
-                Time.timeScale = 1;
+                Pause();
             }
-            else
-            {
-                ShowMenu = true;
-                Time.timeScale = 0;
-            }
-	        
-	    }
-	    if(ShowMenu)
-	    {
-	        Screen.lockCursor = false;
-	    }
-	    else if (!Screen.lockCursor)
-	    {
-	        Screen.lockCursor = true;
-	    }
+        }
 
-
-	    
-
+        if (Menu.enabled)
+        {
+            Screen.lockCursor = false;
+        }
+        else if (!Screen.lockCursor)
+        {
+            Screen.lockCursor = true;
+        }
         
 	}
 
-    void OnApplicationFocus(bool focus)
-    {
-        if (focus)
-        {
-            Screen.lockCursor = false;
-            ShowMenu = true;
-        }
-        else
-        {
-            Screen.lockCursor = true;
 
-        }
-    }
+    //void OnApplicationFocus(bool focus)
+    //{
+    //    if (!focus)
+    //    {
+    //        Pause();
+    //    }
+    //}
 }

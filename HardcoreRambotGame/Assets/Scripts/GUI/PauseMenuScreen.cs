@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class PauseMenuScreen : MonoBehaviour {
+public class PauseMenuScreen : MonoBehaviour
+{
 
+    public MouseLock game;
 	protected GameObject player = null;
 	public GUISkin skin;
 	
@@ -18,8 +20,9 @@ public class PauseMenuScreen : MonoBehaviour {
 	const int MENU_INDEX_EXIT = 2;
 	
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
+	    game = GetComponent<MouseLock>();
 		Reset ();
 	}
 	
@@ -188,8 +191,10 @@ public class PauseMenuScreen : MonoBehaviour {
 	
 	protected void Continue()
 	{
-		this.enabled = false;
-		Reset();
+	    this.enabled = false;
+	    Reset();
+        if(!game)return;
+	    game.Resume();
 	}
 	
 	protected void RestartLevel()
@@ -206,7 +211,8 @@ public class PauseMenuScreen : MonoBehaviour {
     {
         if (!enabled)
 			return;
-		
+	
+
 		if (this.labels.Count == 0)
 			SetupLabels();
 	
@@ -233,6 +239,11 @@ public class PauseMenuScreen : MonoBehaviour {
 			{
 				UpdateSelectedIndex(1);
 			}
+            else if (Event.current.Equals(Event.KeyboardEvent("escape")))
+    		{
+    		    Continue();
+    		}
+    		
 			else if (
 					Event.current.Equals(Event.KeyboardEvent ("return")) ||
 				 	Event.current.Equals(Event.KeyboardEvent ("space"))
