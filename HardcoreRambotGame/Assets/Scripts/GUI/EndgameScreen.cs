@@ -272,7 +272,7 @@ public class EndgameScreen : MonoBehaviour {
 			
 			GUI.Box (new Rect(0,0,Screen.width,Screen.height), "");
 			
-			if (Event.current.Equals (Event.KeyboardEvent ("space")))
+			if (Event.current.isKey || Event.current.isMouse)
 			{
 				Application.LoadLevel("StartMenu");
 			}
